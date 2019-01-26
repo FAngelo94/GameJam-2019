@@ -3,6 +3,22 @@
 [Bb]uild/
 [Bb]uilds/
 
+Assets/GoogleVR
+Assets/Editor
+Assets/Editor Default Resources
+Assets/Gizmos
+Assets/Plugins
+Assets/ResonanceAudio
+Assets/StreamingAssets
+Assets/Resources
+
+Assets/GoogleVR.meta
+Assets/FMODStudioCache.asset
+Assets/FMODStudioCache.asset.meta
+Assets/Plugins.meta
+Assets/ResonanceAudio.meta
+Assets/StreamingAssets.meta
+
 .vs/
 obj/
 
