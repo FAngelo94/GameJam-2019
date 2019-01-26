@@ -185,6 +185,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15765a4b935989b45abdce974ec4b013, type: 3}
+--- !u!1 &242915149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8225773393922889072, guid: 74c5c68a68254054688ccb8e867f5fec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1973178558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &255397257 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 686613270, guid: 5485a4fff4e0d5643b1bf49e34bb3d46,
@@ -458,6 +464,11 @@ PrefabInstance:
       propertyPath: PizzaPanel
       value: 
       objectReference: {fileID: 1027458503}
+    - target: {fileID: 7653313183878578343, guid: c9b0f3c2e9ef2a342a95a0337b5486a9,
+        type: 3}
+      propertyPath: MusicPlayer
+      value: 
+      objectReference: {fileID: 242915149}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9b0f3c2e9ef2a342a95a0337b5486a9, type: 3}
 --- !u!1001 &1973178558
