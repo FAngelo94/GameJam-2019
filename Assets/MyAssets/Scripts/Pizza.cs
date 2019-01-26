@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Pizza : MonoBehaviour
 {
+    public RectTransform PizzaPanel;
+    public float PercentOfSecond=1;
+
     private bool PizzaTaken;
+
+    private float Width;
+    private float PizzaRemain;
     // Start is called before the first frame update
     void Start()
     {
         PizzaTaken = false;
+        Width = PizzaPanel.rect.width;
+        PizzaRemain = 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DecrementPizza()
     {
-        
+        PizzaRemain--;
+        PizzaPanel.sizeDelta = new Vector2(Width / 100 * PizzaRemain, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,4 +33,6 @@ public class Pizza : MonoBehaviour
             PizzaTaken = true;
         }
     }
+
+    
 }

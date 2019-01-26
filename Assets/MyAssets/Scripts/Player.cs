@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     {
         Physics.gravity.Set(0, 0, 0);
         CheckSlow = false;
-        Stunned = false;
+        Stunned = false; Input.
     }
 
     public void AddPizza(GameObject pizza)
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject opponent = collision.gameObject;
-        if (opponent.tag.Equals("Player") && !Stunned && !opponent.GetComponent<Player>().IsStunned())
+        if (opponent.tag.Equals("Player") && !Stunned && !opponent.GetComponent<Player>().IsStunned() && Pizza!=null)
         {
             collision.gameObject.GetComponent<Player>().AddPizza(Pizza);
             Pizza = null;
@@ -198,6 +198,17 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(StunTime);
         Stunned = false;
+    }
+    private IEnumerator EatPizza()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            if(Pizza!=null)
+            {
+                Pizza.GetComponent<Pizza>().DecrementPizza();
+            }
+        }
     }
 
 }
