@@ -48,9 +48,6 @@ public class Player : MonoBehaviour
         pizza.transform.localPosition = p;
         pizza.transform.rotation = Quaternion.identity;
         Pizza = pizza;
-        float scale = FatScale.x;
-        scale = scale + PointsFloat / 100;
-        Fat.transform.localScale = new Vector2(scale, scale);
     }
 
     public bool IsStunned()
@@ -58,9 +55,21 @@ public class Player : MonoBehaviour
         return Stunned;
     }
 
-    private void Update()
+    public void CheckBump(GameObject opponent)
     {
-        
+        if (!Stunned && !opponent.GetComponent<Player>().IsStunned() && Pizza != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(StealCollisionEvent, transform.position);
+
+            opponent.GetComponent<Player>().AddPizza(Pizza);
+            Pizza = null;
+            Stunned = true;
+            StartCoroutine(RemoveStun());
+        }
+        else
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(BumpCollisionEvent, transform.position);
+        }
     }
 
     private void FixedUpdate()
@@ -156,6 +165,8 @@ public class Player : MonoBehaviour
         float s = Speed;
         if (CheckSlow)
             s = SpeedSlow;
+        s = s / 100 * (100 - PointsFloat);
+        s = s > 0 ? s : 0;
         float x = X / 10 * s;
         float y = Y / 10 * s;
         transform.GetComponent<Rigidbody2D>().velocity=new Vector2(x,y);
@@ -209,21 +220,10 @@ public class Player : MonoBehaviour
 
         if (opponent.tag.Equals("Player"))
         {
-            if (!Stunned && !opponent.GetComponent<Player>().IsStunned() && Pizza != null)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(StealCollisionEvent, transform.position);
-
-                collision.gameObject.GetComponent<Player>().AddPizza(Pizza);
-                Pizza = null;
-                Stunned = true;
-                StartCoroutine(RemoveStun());
-            }
-            else
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(BumpCollisionEvent, transform.position);
-            }
+            CheckBump(opponent);   
         }
     }
+    
     private IEnumerator RemoveStun()
     {
         yield return new WaitForSeconds(StunTime);
@@ -240,9 +240,17 @@ public class Player : MonoBehaviour
                 PointsFloat += 0.1f;
                 Debug.Log(PointsFloat);
                 Points.text = PointsFloat.ToString("F1") + " % ";
+                float scale = FatScale.x;
+                scale = scale + PointsFloat / 80;
+                Fat.transform.localScale = new Vector2(scale, scale);
+                IncrementMass();
             }
             Debug.Log("Not Eat");
         }
+    }
+    private void IncrementMass()
+    {
+        transform.GetComponent<Rigidbody2D>().mass = 1 + PointsFloat / 10;
     }
 
 }
