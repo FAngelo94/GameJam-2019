@@ -8,9 +8,11 @@ public class Player : MonoBehaviour
     [Header("Type of commands for this player")]
     public PlayerCommands Commands;
     [Header("Speed of the Player")]
-    public float Speed = 20;
+    public float Speed = 150;
     [Header("Speed of the Player when slow")]
-    public float SpeedSlow = 10;
+    public float SpeedSlow = 100;
+    [Header("Speed of the Player when fast")]
+    public float SpeedFast = 200;
     [Header("Time of stun in seconds")]
     public float StunTime = 2;
     [Header("Text with points")]
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
     public string StealCollisionEvent;
 
     private bool CheckSlow;
+    private bool CheckFast;
     private GameObject Pizza;
     private bool Stunned;
 
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
         PointsFloat = 0;
         Points.text = PointsFloat + "%";
         CheckSlow = false;
+        CheckFast = false;
         Stunned = false;
         Fat = transform.Find("Fat").gameObject;
         FatScale = Fat.transform.localScale;
@@ -165,6 +169,8 @@ public class Player : MonoBehaviour
         float s = Speed;
         if (CheckSlow)
             s = SpeedSlow;
+        if (CheckFast)
+            s = SpeedFast;
         s = s / 100 * (100 - PointsFloat);
         s = s > 0 ? s : 0;
         float x = X / 10 * s;
@@ -201,17 +207,23 @@ public class Player : MonoBehaviour
     {
         if(collision.tag.Equals("SlowObject"))
             CheckSlow = true;
-        
+        if (collision.tag.Equals("FastObject"))
+            CheckFast = true;
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag.Equals("SlowObject"))
             CheckSlow = true;
+        if (collision.tag.Equals("FastObject"))
+            CheckFast = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag.Equals("SlowObject"))
             CheckSlow = false;
+        if (collision.tag.Equals("FastObject"))
+            CheckFast = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
