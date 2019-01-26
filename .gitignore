@@ -12,6 +12,9 @@ Assets/ResonanceAudio
 Assets/StreamingAssets
 Assets/Resources
 
+Assets/Resources.meta
+Assets/Editor.meta
+
 Assets/GoogleVR.meta
 Assets/FMODStudioCache.asset
 Assets/FMODStudioCache.asset.meta
