@@ -22,7 +22,12 @@ public class InputManager : MonoBehaviour
        
     }
 
-    public void FixedUpdate()
+    public void AllowMovement()
+    {
+        NoCollision = true;
+    }
+
+    private void FixedUpdate()
     {
         int XSpeed = 0;
         int YSpeed = 0;
@@ -60,6 +65,7 @@ public class InputManager : MonoBehaviour
         if(NoCollision)
             SetVelocity(XSpeed, YSpeed);
     }
+    
 
     private void SetVelocity(float X,float Y)
     {
@@ -73,7 +79,7 @@ public class InputManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Trigger");
-        NoCollision = false;
+        //NoCollision = false;
     }
 
 }
