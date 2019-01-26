@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     private bool CheckSlow;
     private GameObject Pizza;
     private bool Stunned;
+
+    private GameObject Fat;
+    private Vector2 FatScale;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +36,21 @@ public class Player : MonoBehaviour
         Points.text = PointsFloat + "%";
         CheckSlow = false;
         Stunned = false;
+        Fat = transform.Find("Fat").gameObject;
+        FatScale = Fat.transform.localScale;
         StartCoroutine(EatPizza());
     }
 
     public void AddPizza(GameObject pizza)
     {
         pizza.transform.SetParent(transform);
-        Vector2 p = new Vector2(1.9f, 0);
+        Vector2 p = new Vector2(1f, 0);
         pizza.transform.localPosition = p;
         pizza.transform.rotation = Quaternion.identity;
         Pizza = pizza;
+        float scale = FatScale.x;
+        scale = scale + PointsFloat / 100;
+        Fat.transform.localScale = new Vector2(scale, scale);
     }
 
     public bool IsStunned()
@@ -225,12 +233,13 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
             if(Pizza!=null)
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
-                PointsFloat++;
-                Points.text = PointsFloat + "%";
+                PointsFloat += 0.1f;
+                Debug.Log(PointsFloat);
+                Points.text = PointsFloat.ToString("F1") + " % ";
             }
             Debug.Log("Not Eat");
         }

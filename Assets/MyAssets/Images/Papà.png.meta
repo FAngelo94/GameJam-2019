@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78998a223a036ce4582ff56c7f83fcf0
+guid: cb943f0dc881b2d4da83e2059c6cdf10
 TextureImporter:
   fileIDToRecycleName:
     21300000: "Pap\xE0_0"
@@ -102,29 +102,9 @@ TextureImporter:
       name: "Pap\xE0_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 129
-        width: 167
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42be020d62a509945a19d678cd25fac3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Pap\xE0_1"
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 63
-        width: 237
+        x: 129
+        y: 1604
+        width: 168
         height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -133,7 +113,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d24026a9d4a17d41a8637c000e2c250
+      spriteID: e6449513b15da114789d00138e981e4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pap\xE0_1"
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1019
+        width: 167
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7310eb3356965b48a5e7bee1682b939
       vertices: []
       indices: 
       edges: []
@@ -142,8 +142,8 @@ TextureImporter:
       name: "Pap\xE0_2"
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 0
+        x: 0
+        y: 429
         width: 226
         height: 226
       alignment: 0
@@ -153,7 +153,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f7cb697153facd4093d899c5e74099d
+      spriteID: 5939479f033e52d45b0e428eb715d58b
       vertices: []
       indices: 
       edges: []
@@ -162,10 +162,10 @@ TextureImporter:
       name: "Pap\xE0_3"
       rect:
         serializedVersion: 2
-        x: 1604
-        y: 29
-        width: 167
-        height: 176
+        x: 29
+        y: 0
+        width: 176
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7d01b00bb84bc44e9fcf1163258539b
+      spriteID: fbea37072959a7d4385158bbf1be7d1b
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6b69369c3e2b8ae459f9cda588e379b2
+    spriteID: 755746ae1d891394685ebd94d18c5e31
     vertices: []
     indices: 
     edges: []
