@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     [Header("Text with points")]
     public Text Points;
     private float PointsFloat;
+    [FMODUnity.EventRef]
+    public string FootStepEvent;
+    private int stepSoundTimer;
 
     [FMODUnity.EventRef]
     public string BumpCollisionEvent;
@@ -80,89 +83,192 @@ public class Player : MonoBehaviour
     {
         int XSpeed = 0;
         int YSpeed = 0;
+
+        stepSoundTimer++;
+        bool playSound = false;
+
         if (Commands.Equals(PlayerCommands.WASD))
         {
             if (Input.GetKey(KeyCode.D))
+            {
                 XSpeed++;
+                playSound = true;
+            }
+
             if (Input.GetKey(KeyCode.A))
+            {
                 XSpeed--;
+                playSound = true;
+            }
+
             if (Input.GetKey(KeyCode.W))
+            {
                 YSpeed++;
+                playSound = true;
+            }
+
             if (Input.GetKey(KeyCode.S))
+            {
                 YSpeed--;
+                playSound = true;
+            }
         }
         if (Commands.Equals(PlayerCommands.Arrows))
         {
             if (Input.GetKey(KeyCode.RightArrow))
+            {
                 XSpeed++;
-            if (Input.GetKey(KeyCode.LeftArrow))
-                XSpeed--;
-            if (Input.GetKey(KeyCode.UpArrow))
-                YSpeed++;
-            if (Input.GetKey(KeyCode.DownArrow))
-                YSpeed--;
+                playSound = true;
+            }
 
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                XSpeed--;
+                playSound = true;
+            }
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                YSpeed++;
+                playSound = true;
+            }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                YSpeed--;
+                playSound = true;
+            }
         }
         if (Commands.Equals(PlayerCommands.IJKL))
         {
             if (Input.GetKey(KeyCode.L))
+            {
                 XSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.J))
+            {
                 XSpeed--;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.I))
+            {
                 YSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.K))
-                YSpeed--;
+            {
+                XSpeed--;
+                playSound = true;
+            }
 
         }
         if (Commands.Equals(PlayerCommands.Pad1))
         {
             if (Input.GetKey(KeyCode.Joystick1Button1))
+            {
                 XSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick1Button3))
+            {
                 XSpeed--;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick1Button0))
+            {
                 YSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick1Button2))
+            {
                 YSpeed--;
+                playSound = true;
+            }
         }
         if (Commands.Equals(PlayerCommands.Pad2))
         {
             if (Input.GetKey(KeyCode.Joystick2Button1))
+            {
                 XSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick2Button3))
+            {
                 XSpeed--;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick2Button0))
+            {
                 YSpeed++;
+                playSound = true;
+            }
             if (Input.GetKey(KeyCode.Joystick2Button2))
+            {
                 YSpeed--;
+                playSound = true;
+            }
         }
         if (Commands.Equals(PlayerCommands.Pad3))
         {
             float h = Input.GetAxis("HorizontalJoy1");
             float v = Input.GetAxis("VerticalJoy1");
 
-            if (h == -1) XSpeed--;
-            else if (h == 1) XSpeed++;
-            if (v == -1) YSpeed++;
-            else if (v == 1) YSpeed--;
+            if (h == -1)
+            {
+                XSpeed--;
+                playSound = true;
+            }
+            else if (h == 1)
+            {
+                XSpeed++;
+                playSound = true;
+            }
+            if (v == -1)
+            {
+                YSpeed++;
+                playSound = true;
+            }
+            else if (v == 1)
+            {
+                YSpeed--;
+                playSound = true;
+            }
         }
         if (Commands.Equals(PlayerCommands.Pad4))
         {
             float h = Input.GetAxis("HorizontalJoy2");
             float v = Input.GetAxis("VerticalJoy2");
-
-            if (h == -1) XSpeed--;
-            else if (h == 1) XSpeed++;
-            if (v == -1) YSpeed++;
-            else if (v == 1) YSpeed--;
+            if (h == -1)
+            {
+                XSpeed--;
+                playSound = true;
+            }
+            else if (h == 1)
+            {
+                XSpeed++;
+                playSound = true;
+            }
+            if (v == -1)
+            {
+                YSpeed++;
+                playSound = true;
+            }
+            else if (v == 1)
+            {
+                YSpeed--;
+                playSound = true;
+            }
         }
         if (!Stunned)
             SetVelocity(XSpeed, YSpeed);
         if (XSpeed != 0 || YSpeed != 0)
             SetRotation(XSpeed, YSpeed);
+
+        if (playSound && stepSoundTimer > 12)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(FootStepEvent, transform.position);
+            stepSoundTimer = 0;
+        }
     }
-    
 
     private void SetVelocity(float X,float Y)
     {
