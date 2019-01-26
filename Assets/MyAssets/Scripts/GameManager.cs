@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public GameObject Panels;
     //public GameObject PlayerPrefab;
     //public GameObject[] spawns;
-    public
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +30,7 @@ public class GameManager : MonoBehaviour
         {
             RectTransform r = Panels.transform.Find("Player " + (i + 1)).GetComponent<RectTransform>();
             r.localScale = new Vector2(r.localScale.x, r.localScale.y / 100 * float.Parse(Points["Player " + (i + 1)]));
-            Panels.transform.Find("Point " + (i + 1)).GetComponent<Text>().text = Points["Player " + (i + 1)] + "&";
+            Panels.transform.Find("Point " + (i + 1)).GetComponent<Text>().text = float.Parse(Points["Player " + (i + 1)]).ToString("F1") + "%";
         }
 
     }
