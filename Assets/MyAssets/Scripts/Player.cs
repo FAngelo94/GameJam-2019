@@ -238,10 +238,8 @@ public class Player : MonoBehaviour
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
                 PointsFloat += 0.1f;
-                PointsFloat = (int)(PointsFloat * 10);
-                PointsFloat /= 10;
                 Debug.Log(PointsFloat);
-                Points.text = PointsFloat + "%";
+                Points.text = PointsFloat.ToString("F1") + " % ";
             }
             Debug.Log("Not Eat");
         }
