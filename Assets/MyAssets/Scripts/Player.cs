@@ -2,21 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [Header("Type of commands for this player")]
     public PlayerCommands Commands;
     [Header("Speed of the Player")]
-    public float Speed;
+    public float Speed = 20;
     [Header("Speed of the Player when slow")]
-    public float SpeedSlow;
+    public float SpeedSlow = 10;
+    [Header("Time of stun in seconds")]
+    public float StunTime = 2;
 
     private bool CheckSlow;
+    private GameObject Pizza;
+    private bool Stunned;
     // Start is called before the first frame update
     void Start()
     {
         Physics.gravity.Set(0, 0, 0);
         CheckSlow = false;
+        Stunned = false;
+    }
+
+    public void AddPizza(GameObject pizza)
+    {
+        pizza.transform.SetParent(transform);
+        Vector2 p = new Vector2(1.9f, 0);
+        pizza.transform.localPosition = p;
+        pizza.transform.rotation = Quaternion.identity;
+        Pizza = pizza;
+    }
+
+    public bool IsStunned()
+    {
+        return Stunned;
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void FixedUpdate()
@@ -71,13 +95,13 @@ public class InputManager : MonoBehaviour
         }
         if (Commands.Equals(PlayerCommands.Pad2))
         {
-            if (Input.GetKey(KeyCode.Joystick3Button1))
+            if (Input.GetKey(KeyCode.Joystick2Button1))
                 XSpeed++;
-            if (Input.GetKey(KeyCode.Joystick3Button3))
+            if (Input.GetKey(KeyCode.Joystick2Button3))
                 XSpeed--;
-            if (Input.GetKey(KeyCode.Joystick3Button0))
+            if (Input.GetKey(KeyCode.Joystick2Button0))
                 YSpeed++;
-            if (Input.GetKey(KeyCode.Joystick3Button2))
+            if (Input.GetKey(KeyCode.Joystick2Button2))
                 YSpeed--;
         }
         if (Commands.Equals(PlayerCommands.Pad3))
@@ -92,15 +116,16 @@ public class InputManager : MonoBehaviour
         }
         if (Commands.Equals(PlayerCommands.Pad4))
         {
-            float h = Input.GetAxis("HorizontalJoy3");
-            float v = Input.GetAxis("VerticalJoy3");
+            float h = Input.GetAxis("HorizontalJoy2");
+            float v = Input.GetAxis("VerticalJoy2");
 
             if (h == -1) XSpeed--;
             else if (h == 1) XSpeed++;
             if (v == -1) YSpeed++;
             else if (v == 1) YSpeed--;
         }
-        SetVelocity(XSpeed, YSpeed);
+        if (!Stunned)
+            SetVelocity(XSpeed, YSpeed);
         if (XSpeed != 0 || YSpeed != 0)
             SetRotation(XSpeed, YSpeed);
     }
@@ -111,8 +136,8 @@ public class InputManager : MonoBehaviour
         float s = Speed;
         if (CheckSlow)
             s = SpeedSlow;
-        float x = X / 100 * s;
-        float y = Y / 100 * s;
+        float x = X / 10 * s;
+        float y = Y / 10 * s;
         transform.GetComponent<Rigidbody2D>().velocity=new Vector2(x,y);
         
     }
@@ -144,7 +169,8 @@ public class InputManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag.Equals("SlowObject"))
-        CheckSlow = true;
+            CheckSlow = true;
+        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -155,6 +181,23 @@ public class InputManager : MonoBehaviour
     {
         if (collision.tag.Equals("SlowObject"))
             CheckSlow = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject opponent = collision.gameObject;
+        if (opponent.tag.Equals("Player") && !Stunned && !opponent.GetComponent<Player>().IsStunned())
+        {
+            collision.gameObject.GetComponent<Player>().AddPizza(Pizza);
+            Pizza = null;
+            Stunned = true;
+            StartCoroutine(RemoveStun());
+        }
+    }
+    private IEnumerator RemoveStun()
+    {
+        yield return new WaitForSeconds(StunTime);
+        Stunned = false;
     }
 
 }
