@@ -24,7 +24,8 @@ public class Pizza : MonoBehaviour
         PizzaRemain--;
         Debug.Log(PizzaPanel.localScale);
         PizzaPanel.localScale = new Vector2(Width / 100 * PizzaRemain, 1);
-        if(PizzaRemain==0)
+        if (PizzaRemain == 0)
+            GameManager.instance.TheEnd();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
