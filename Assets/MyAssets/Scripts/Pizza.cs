@@ -15,14 +15,16 @@ public class Pizza : MonoBehaviour
     void Start()
     {
         PizzaTaken = false;
-        Width = PizzaPanel.rect.width;
+        Width = PizzaPanel.localScale.x;
         PizzaRemain = 100;
     }
 
     public void DecrementPizza()
     {
         PizzaRemain--;
-        PizzaPanel.sizeDelta = new Vector2(Width / 100 * PizzaRemain, 0);
+        Debug.Log(PizzaPanel.localScale);
+        PizzaPanel.localScale = new Vector2(Width / 100 * PizzaRemain, 1);
+        if(PizzaRemain==0)
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

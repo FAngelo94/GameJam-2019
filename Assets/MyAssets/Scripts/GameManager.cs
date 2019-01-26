@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     public GameObject PlayerPrefab;
     public GameObject[] spawns;
     // Start is called before the first frame update
@@ -23,5 +25,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TheEnd()
+    {
+
     }
 }

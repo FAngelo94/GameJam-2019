@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     public float SpeedSlow = 10;
     [Header("Time of stun in seconds")]
     public float StunTime = 2;
+    [Header("Text with points")]
+    public Text Points;
+    private float PointsFloat;
 
     private bool CheckSlow;
     private GameObject Pizza;
@@ -20,8 +24,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         Physics.gravity.Set(0, 0, 0);
+        PointsFloat = 0;
+        Points.text = PointsFloat + "%";
         CheckSlow = false;
-        Stunned = false; Input.
+        Stunned = false;
+        StartCoroutine(EatPizza());
     }
 
     public void AddPizza(GameObject pizza)
@@ -207,7 +214,10 @@ public class Player : MonoBehaviour
             if(Pizza!=null)
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
+                PointsFloat++;
+                Points.text = PointsFloat + "%";
             }
+            Debug.Log("Not Eat");
         }
     }
 
