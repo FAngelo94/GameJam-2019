@@ -21,7 +21,7 @@ public class Pizza : MonoBehaviour
 
     public void DecrementPizza()
     {
-        PizzaRemain--;
+        PizzaRemain -= 0.1f;
         Debug.Log(PizzaPanel.localScale);
         PizzaPanel.localScale = new Vector2(Width / 100 * PizzaRemain, 1);
         if (PizzaRemain == 0)
