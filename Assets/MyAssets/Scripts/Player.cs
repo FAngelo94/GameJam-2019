@@ -156,7 +156,7 @@ public class Player : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.K))
             {
-                XSpeed--;
+                YSpeed--;
                 playSound = true;
             }
 
@@ -287,7 +287,6 @@ public class Player : MonoBehaviour
 
     private void SetRotation(float X, float Y)
     {
-        Debug.Log(X + "-" + Y);
         float rotation = 0;
         if (X < 0 && Y==0)
             rotation = 180;
@@ -356,14 +355,13 @@ public class Player : MonoBehaviour
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
                 PointsFloat += 0.1f;
-                Debug.Log(PointsFloat);
                 Points.text = PointsFloat.ToString("F1") + " % ";
                 float scale = FatScale.x;
-                scale = scale + PointsFloat / 80;
+                scale = scale + PointsFloat / 50;
                 Fat.transform.localScale = new Vector2(scale, scale);
                 IncrementMass();
+                GameManager.instance.UpdatePoints(gameObject.name, PointsFloat);
             }
-            Debug.Log("Not Eat");
         }
     }
     private void IncrementMass()
