@@ -11,6 +11,10 @@ public class Pizza : MonoBehaviour
 
     private float Width;
     private float PizzaRemain;
+
+    [FMODUnity.EventRef]
+    public string GrabEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,8 @@ public class Pizza : MonoBehaviour
     {
         if (!PizzaTaken && collision.tag.Equals("Player"))
         {
+            FMODUnity.RuntimeManager.PlayOneShot(GrabEvent, transform.position);
+
             collision.GetComponent<Player>().AddPizza(gameObject);
             PizzaTaken = true;
         }
