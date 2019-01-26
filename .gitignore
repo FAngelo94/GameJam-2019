@@ -29,3 +29,4 @@ obj/
 *.sln
 *.log
 *.meta
+*.asset

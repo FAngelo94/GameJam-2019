@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         {
             RectTransform r = Panels.transform.Find("Player " + (i + 1)).GetComponent<RectTransform>();
             r.localScale = new Vector2(r.localScale.x, r.localScale.y / 100 * float.Parse(Points["Player " + (i + 1)]));
+            Panels.transform.Find("Point " + (i + 1)).GetComponent<Text>().text = Points["Player " + (i + 1)] + "&";
         }
 
     }
