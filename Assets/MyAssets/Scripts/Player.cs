@@ -17,6 +17,11 @@ public class Player : MonoBehaviour
     public Text Points;
     private float PointsFloat;
 
+    [FMODUnity.EventRef]
+    public string BumpCollisionEvent;
+    [FMODUnity.EventRef]
+    public string StealCollisionEvent;
+
     private bool CheckSlow;
     private GameObject Pizza;
     private bool Stunned;
@@ -193,12 +198,22 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject opponent = collision.gameObject;
-        if (opponent.tag.Equals("Player") && !Stunned && !opponent.GetComponent<Player>().IsStunned() && Pizza!=null)
+
+        if (opponent.tag.Equals("Player"))
         {
-            collision.gameObject.GetComponent<Player>().AddPizza(Pizza);
-            Pizza = null;
-            Stunned = true;
-            StartCoroutine(RemoveStun());
+            if (!Stunned && !opponent.GetComponent<Player>().IsStunned() && Pizza != null)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(StealCollisionEvent, transform.position);
+
+                collision.gameObject.GetComponent<Player>().AddPizza(Pizza);
+                Pizza = null;
+                Stunned = true;
+                StartCoroutine(RemoveStun());
+            }
+            else
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(BumpCollisionEvent, transform.position);
+            }
         }
     }
     private IEnumerator RemoveStun()

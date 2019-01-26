@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054678356597296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -488.15408, z: 3}
+  m_LocalPosition: {x: -578.05, y: -489.83, z: 3}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -99,6 +99,8 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054678356597299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054678819049793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -488.15408, z: 3}
+  m_LocalPosition: {x: -581.83, y: -488.1, z: 3}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -281,6 +283,8 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054678819049804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -356,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054679086941398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -488.15408, z: 3}
+  m_LocalPosition: {x: -583.15, y: -489.96, z: 3}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -427,6 +431,8 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054679086941393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -502,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054679663502605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -488.15408, z: 3}
+  m_LocalPosition: {x: -584.1, y: -488.64, z: 3}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -573,6 +579,8 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054679663502600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -623,9 +631,8 @@ Rigidbody2D:
 --- !u!1 &7972054680118438200
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023879, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -644,13 +651,12 @@ GameObject:
 --- !u!4 &7972054680118438149
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680118438200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -489.35406, z: 3}
+  m_LocalPosition: {x: -580.65, y: -490.18, z: 3}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -659,9 +665,8 @@ Transform:
 --- !u!212 &7972054680118438148
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023877, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680118438200}
   m_Enabled: 1
@@ -708,9 +713,8 @@ SpriteRenderer:
 --- !u!114 &7972054680118438203
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023878, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680118438200}
   m_Enabled: 1
@@ -723,12 +727,13 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054680118438202
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023883, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680118438200}
   m_Enabled: 1
@@ -754,9 +759,8 @@ BoxCollider2D:
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1503418292893023882, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 8826874429481267367}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680118438200}
   m_BodyType: 0
@@ -800,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972054680395014384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580.572, y: -488.15408, z: 3}
+  m_LocalPosition: {x: -577.82, y: -488.44, z: 3}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 7972054678382681242}
@@ -871,6 +875,8 @@ MonoBehaviour:
   SpeedSlow: 10
   StunTime: 1
   Points: {fileID: 0}
+  BumpCollisionEvent: event:/sfx_Hit_Generic
+  StealCollisionEvent: event:/sfx_Hit_Pizza
 --- !u!61 &7972054680395014386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -918,92 +924,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!1001 &8826874429481267367
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7972054678382681242}
-    m_Modifications:
-    - target: {fileID: 1503418292893023879, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -580.572
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -489.35406
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023876, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023878, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: SpeedSlow
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023878, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: Speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023878, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: StunTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503418292893023878, guid: a8f9ba038a726d94fa34f133df0cc9ad,
-        type: 3}
-      propertyPath: Points
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a8f9ba038a726d94fa34f133df0cc9ad, type: 3}
