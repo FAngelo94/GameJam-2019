@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pizza : MonoBehaviour
 {
     public RectTransform PizzaPanel;
-    public float PercentOfSecond=200;
+    public float PercentOfSecond=1;
 
     private bool PizzaTaken;
 
@@ -14,6 +14,8 @@ public class Pizza : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string GrabEvent;
+
+    public GameObject MusicPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,9 @@ public class Pizza : MonoBehaviour
     public void DecrementPizza()
     {
         PizzaRemain -= 0.1f;
+//        Debug.Log(PizzaPanel.localScale);
         PizzaPanel.localScale = new Vector2(Width / 100 * PizzaRemain, 1);
-        if (PizzaRemain <= 0)
+        if (PizzaRemain == 0)
             GameManager.instance.TheEnd();
     }
 
@@ -37,10 +40,10 @@ public class Pizza : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(GrabEvent, transform.position);
 
+            MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Pizza_Taken", 1);
+
             collision.GetComponent<Player>().AddPizza(gameObject);
             PizzaTaken = true;
         }
     }
-
-    
 }

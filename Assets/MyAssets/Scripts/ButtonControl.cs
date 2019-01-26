@@ -10,9 +10,24 @@ public class ButtonControl : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void GoToOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
