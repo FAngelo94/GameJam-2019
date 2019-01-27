@@ -18,18 +18,27 @@ public class Characters : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.anyKey)
+        if(Input.GetKey(KeyCode.Space))
             SceneManager.LoadScene("Level1");
+        if (Input.GetKey(KeyCode.RightArrow))
+            Slide(-20);
+        if (Input.GetKey(KeyCode.LeftArrow))
+            Slide(20);
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        Vector2 p=Panels.transform.position;
+        Slide(0);
+    }
+
+    private void Slide(int speed)
+    {
+        Vector2 p = Panels.transform.position;
         if (p.x > -7000)
         {
-            p.x -= SpeedSlider;
+            p.x -= SpeedSlider + speed;
             Panels.transform.position = p;
         }
         if (p.x <= -7000 && check)
@@ -37,8 +46,8 @@ public class Characters : MonoBehaviour {
             check = false;
             StartCoroutine(StartGame());
         }
-
     }
+
     private IEnumerator StartGame()
     {
         yield return new WaitForSeconds(5);
