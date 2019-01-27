@@ -7,11 +7,13 @@ public class Characters : MonoBehaviour {
 
     public float SpeedSlider = 5;
 
+    private bool check;
     private GameObject Panels;
     // Start is called before the first frame update
     void Start()
     {
         Panels = transform.Find("Panels").gameObject;
+        check = true;
     }
 
     // Update is called once per frame
@@ -24,8 +26,11 @@ public class Characters : MonoBehaviour {
             p.x -= SpeedSlider;
             Panels.transform.position = p;
         }
-        if (p.x == -7000)
+        if (p.x <= -7000 && check)
+        {
+            check = false;
             StartCoroutine(StartGame());
+        }
 
     }
     private IEnumerator StartGame()
