@@ -16,6 +16,12 @@ public class Characters : MonoBehaviour {
         check = true;
     }
 
+    private void Update()
+    {
+        if(Input.anyKey)
+            SceneManager.LoadScene("Level1");
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
