@@ -392,7 +392,7 @@ public class Player : MonoBehaviour
                 PointsFloat += 0.1f;
                 Points.text = PointsFloat.ToString("F1") + " % ";
                 float scale = FatScale.x;
-                scale = scale + PointsFloat / 50;
+                scale = scale + PointsFloat / 30;
                 Fat.transform.localScale = new Vector2(scale, scale);
                 IncrementMass();
                 GameManager.instance.UpdatePoints(gameObject.name, PointsFloat);
@@ -401,7 +401,7 @@ public class Player : MonoBehaviour
     }
     private void IncrementMass()
     {
-        transform.GetComponent<Rigidbody2D>().mass = 1 + PointsFloat / 10;
+        transform.GetComponent<Rigidbody2D>().mass = 1 + PointsFloat;
     }
 
 }
