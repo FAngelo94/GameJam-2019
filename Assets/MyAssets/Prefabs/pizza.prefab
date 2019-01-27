@@ -96,6 +96,7 @@ MonoBehaviour:
   PizzaPanel: {fileID: 0}
   PercentOfSecond: 1
   GrabEvent: event:/sfx_Start_Pizza
+  MusicPlayer: {fileID: 0}
 --- !u!61 &7653313183878578342
 BoxCollider2D:
   m_ObjectHideFlags: 0
