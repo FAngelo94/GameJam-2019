@@ -378,6 +378,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 504180332, guid: e0529639aeaed2c4291a1b378f3b4bba, type: 3}
+      propertyPath: m_TagString
+      value: WaterObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0529639aeaed2c4291a1b378f3b4bba, type: 3}
 --- !u!114 &1828848072 stripped
@@ -482,6 +486,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MusicPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225773393922889072, guid: 74c5c68a68254054688ccb8e867f5fec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4365894164705512877, guid: 74c5c68a68254054688ccb8e867f5fec,
         type: 3}
