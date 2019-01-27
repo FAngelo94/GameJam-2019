@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public PlayerCommands Commands;
     [Header("Speed of the Player")]
     public float Speed = 150;
+    [Header("Speed of the Player when very slow")]
+    public float SpeedVerySlow = 75;
     [Header("Speed of the Player when slow")]
     public float SpeedSlow = 100;
     [Header("Speed of the Player when fast")]
@@ -20,13 +22,18 @@ public class Player : MonoBehaviour
     private float PointsFloat;
     [FMODUnity.EventRef]
     public string FootStepEvent;
+    [FMODUnity.EventRef]
+    public string WaterStepEvent;
     private int stepSoundTimer;
 
     [FMODUnity.EventRef]
     public string BumpCollisionEvent;
     [FMODUnity.EventRef]
     public string StealCollisionEvent;
+    [FMODUnity.EventRef]
+    public string CarpetEvent;
 
+    private bool CheckVerySlow;
     private bool CheckSlow;
     private bool CheckFast;
     private GameObject Pizza;
@@ -264,8 +271,15 @@ public class Player : MonoBehaviour
             SetRotation(XSpeed, YSpeed);
 
         if (playSound && stepSoundTimer > 12)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(FootStepEvent, transform.position);
+        { 
+            if(CheckVerySlow)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(WaterStepEvent, transform.position);
+            }
+            else
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(FootStepEvent, transform.position);
+            }
             stepSoundTimer = 0;
         }
     }
@@ -273,6 +287,8 @@ public class Player : MonoBehaviour
     private void SetVelocity(float X,float Y)
     {
         float s = Speed;
+        if (CheckVerySlow)
+            s = SpeedVerySlow;
         if (CheckSlow)
             s = SpeedSlow;
         if (CheckFast)
@@ -310,14 +326,25 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag.Equals("SlowObject"))
+        if (collision.tag.Equals("WaterObject"))
+        {
+            CheckVerySlow = true;
+        }
+        if (collision.tag.Equals("SlowObject"))
+        {
             CheckSlow = true;
+        }
         if (collision.tag.Equals("FastObject"))
+        {
             CheckFast = true;
+            FMODUnity.RuntimeManager.PlayOneShot(CarpetEvent, transform.position);
+        }
 
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.tag.Equals("WaterObject"))
+            CheckVerySlow = true;
         if (collision.tag.Equals("SlowObject"))
             CheckSlow = true;
         if (collision.tag.Equals("FastObject"))
@@ -325,6 +352,8 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.tag.Equals("WaterObject"))
+            CheckVerySlow = false;
         if (collision.tag.Equals("SlowObject"))
             CheckSlow = false;
         if (collision.tag.Equals("FastObject"))

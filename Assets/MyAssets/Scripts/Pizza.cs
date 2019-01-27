@@ -9,6 +9,8 @@ public class Pizza : MonoBehaviour
 
     private bool PizzaTaken;
 
+    private bool endMusic;
+
     private float Width;
     private float PizzaRemain;
 
@@ -21,6 +23,7 @@ public class Pizza : MonoBehaviour
     void Start()
     {
         PizzaTaken = false;
+        endMusic = true;
         Width = PizzaPanel.localScale.x;
         PizzaRemain = 100;
     }
@@ -30,6 +33,12 @@ public class Pizza : MonoBehaviour
         PizzaRemain -= 0.1f;
 //        Debug.Log(PizzaPanel.localScale);
         PizzaPanel.localScale = new Vector2(Width / 100 * PizzaRemain, 1);
+
+        if (PizzaRemain <= 3 && endMusic)
+        {
+            endMusic = false;
+            MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("End", 1);
+        }
         if (PizzaRemain <= 0)
             GameManager.instance.TheEnd();
     }
