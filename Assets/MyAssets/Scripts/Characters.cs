@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Characters : MonoBehaviour { 
 
@@ -16,8 +17,20 @@ public class Characters : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Vector2 p=Panels.transform.position;
-        p.x -= SpeedSlider;
-        Panels.transform.position = p;
+        if (p.x > -7000)
+        {
+            p.x -= SpeedSlider;
+            Panels.transform.position = p;
+        }
+        if (p.x == -7000)
+            StartCoroutine(StartGame());
+
+    }
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Level1");
     }
 }

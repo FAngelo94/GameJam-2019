@@ -24,7 +24,7 @@ public class Pizza : MonoBehaviour
     {
         PizzaTaken = false;
         endMusic = true;
-        Width = PizzaPanel.localScale.x;
+        Width = 1;
         BoxRemain = 100;
     }
 

@@ -179,38 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1527471364, guid: 15765a4b935989b45abdce974ec4b013, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174924400986079292, guid: 15765a4b935989b45abdce974ec4b013,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 614da903fc1e17546b7b76b2c76a3eb1,
-        type: 3}
-    - target: {fileID: 1440934391621862923, guid: 15765a4b935989b45abdce974ec4b013,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1876618699}
-    - target: {fileID: 1440934391621862923, guid: 15765a4b935989b45abdce974ec4b013,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440934391621862923, guid: 15765a4b935989b45abdce974ec4b013,
-        type: 3}
-      propertyPath: m_SpriteState.m_HighlightedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3238a5ee1d588dd4f8d08a0164692a89,
-        type: 3}
-    - target: {fileID: 1440934391621862923, guid: 15765a4b935989b45abdce974ec4b013,
-        type: 3}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3238a5ee1d588dd4f8d08a0164692a89,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15765a4b935989b45abdce974ec4b013, type: 3}
 --- !u!1 &815729225
@@ -418,18 +386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
---- !u!114 &1876618699 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
-    type: 3}
-  m_PrefabInstance: {fileID: 393357037}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57800b142c19d344bec4d53f31a42d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5131097733135380580
 PrefabInstance:
   m_ObjectHideFlags: 0

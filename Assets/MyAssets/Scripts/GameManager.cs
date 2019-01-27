@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private Dictionary<string, string> Points = new Dictionary<string, string>();
     public GameObject Panels;
-    //public GameObject PlayerPrefab;
-    //public GameObject[] spawns;
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -44,5 +41,10 @@ public class GameManager : MonoBehaviour
     {
         Panels.SetActive(false);
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
