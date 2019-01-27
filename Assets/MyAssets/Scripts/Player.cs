@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public string FootStepEvent;
     [FMODUnity.EventRef]
     public string WaterStepEvent;
+    [FMODUnity.EventRef]
+    public string ClothStepEvent;
     private int stepSoundTimer;
 
     [FMODUnity.EventRef]
@@ -275,6 +277,10 @@ public class Player : MonoBehaviour
             if(CheckVerySlow)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(WaterStepEvent, transform.position);
+            }
+            else if (CheckSlow)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(ClothStepEvent, transform.position);
             }
             else
             {

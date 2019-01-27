@@ -1264,6 +1264,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -1488,6 +1489,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -1670,6 +1672,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -1815,6 +1818,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -1960,6 +1964,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -2105,6 +2110,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
@@ -2250,6 +2256,7 @@ MonoBehaviour:
   Points: {fileID: 0}
   FootStepEvent: event:/sfx_Footsteps
   WaterStepEvent: event:/sfx_Footstep_Wet
+  ClothStepEvent: event:/sfx_Footstep_Cloth
   BumpCollisionEvent: event:/sfx_Hit_Generic
   StealCollisionEvent: event:/sfx_Hit_Pizza
   CarpetEvent: event:/sfx_Tappeto
