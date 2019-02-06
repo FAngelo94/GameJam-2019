@@ -8,13 +8,13 @@ public class Fat : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            Player p = transform.parent.GetComponent<Player>();
+            Player_AirConsole p = transform.parent.GetComponent<Player_AirConsole>();
             if (p != null)
             {
-                if (collision.transform.GetComponent<Player>() != null)
-                    transform.parent.GetComponent<Player>().CheckBump(collision.gameObject);
+                if (collision.transform.GetComponent<Player_AirConsole>() != null)
+                    transform.parent.GetComponent<Player_AirConsole>().CheckBump(collision.gameObject);
                 else
-                    transform.parent.GetComponent<Player>().CheckBump(collision.transform.parent.gameObject);
+                    transform.parent.GetComponent<Player_AirConsole>().CheckBump(collision.transform.parent.gameObject);
             }
         }
     }

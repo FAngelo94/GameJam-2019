@@ -19,7 +19,8 @@ public class Characters : MonoBehaviour {
     private void Update()
     {
         if(Input.GetKey(KeyCode.Space))
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level1_AirConsoleTest");
+        //SceneManager.LoadScene("Level1");
         if (Input.GetKey(KeyCode.RightArrow))
             Slide(20);
         if (Input.GetKey(KeyCode.LeftArrow))

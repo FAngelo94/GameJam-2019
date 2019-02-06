@@ -51,7 +51,7 @@ public class Pizza : MonoBehaviour
 
             MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Pizza_Taken", 1);
 
-            collision.GetComponent<Player>().AddPizza(gameObject);
+            collision.GetComponent<Player_AirConsole>().AddPizza(gameObject);
             PizzaTaken = true;
         }
     }

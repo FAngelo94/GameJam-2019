@@ -4,11 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//airconsole
+using NDream.AirConsole;
+using Newtonsoft.Json.Linq;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private Dictionary<string, string> Points = new Dictionary<string, string>();
     public GameObject Panels;
+
+    void Awake()
+    {
+        AirConsole.instance.onConnect += OnConnect;
+        AirConsole.instance.onDisconnect += OnDisconnect;
+    }
+
     void Start()
     {
         
@@ -46,5 +57,18 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    //AirConsole
+    void OnConnect(int device_id)
+    {
+        int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
+        if (devNum < 7) AirConsole.instance.SetActivePlayers(devNum);
+    }
+
+    void OnDisconnect(int device_id)
+    {
+        int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
+        if (devNum < 7) AirConsole.instance.SetActivePlayers(devNum);
     }
 }
