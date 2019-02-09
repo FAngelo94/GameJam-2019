@@ -20,8 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: f6fd0cc0dbe3645428453aedae05680a
-  - enabled: 0
-    path: Assets/Scenes/AirConsoleTest.unity
+  - enabled: 1
+    path: Assets/Scenes/AirConsole Scenes/AirConsoleTest.unity
     guid: 579a5e685d358384192c6fbaec00903d
   - enabled: 1
     path: Assets/Scenes/Level1_AirConsoleTest.unity

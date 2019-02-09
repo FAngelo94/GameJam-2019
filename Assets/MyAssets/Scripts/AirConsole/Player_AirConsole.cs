@@ -263,15 +263,13 @@ public class Player_AirConsole : MonoBehaviour
         if (active_player == PlayerID)
         {
             if (data != null &&
-                data["data"] != null &&
-                data["data"]["key"] != null &&
-                data["data"]["pressed"] != null)
+                data["key"] != null &&
+                data["pressed"] != null)
             {
-//Debug.Log(data["data"].ToString());
-                string key = key = (string)data["data"]["key"];
-
-                if ((bool)data["data"]["pressed"])
+                string key = key = (string)data["key"];
+                if ((bool)data["pressed"])
                 {
+                    Debug.Log("IF");
                     if (key.Equals("up")) moveUp = true;
                     if (key.Equals("down")) moveDown = true;
                     if (key.Equals("right")) moveRight = true;
@@ -279,6 +277,7 @@ public class Player_AirConsole : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("ELSE");
                     if (key.Equals("up")) moveUp = false;
                     if (key.Equals("down")) moveDown = false;
                     if (key.Equals("right")) moveRight = false;
