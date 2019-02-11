@@ -9,7 +9,7 @@ public class AirConsoleManager : MonoBehaviour
     public void Ready()
     {
         SetActivePlayers();
-        SceneManager.LoadScene("AirConsoleTest");
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void SetActivePlayers()

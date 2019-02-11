@@ -8,8 +8,6 @@ using Newtonsoft.Json.Linq;
 
 public class Player_AirConsole : MonoBehaviour
 {
-    [Header("Type of commands for this player")]
-    public PlayerCommands Commands;
     [Header("Player ID")]
     public int PlayerID;
     [Header("Speed of the Player")]
@@ -23,7 +21,7 @@ public class Player_AirConsole : MonoBehaviour
     [Header("Time of stun in seconds")]
     public float StunTime = 1;
     [Header("Text with points")]
-    public Text Points;
+//    public Text Points;
     private float PointsFloat;
     [FMODUnity.EventRef]
     public string FootStepEvent;
@@ -61,7 +59,7 @@ public class Player_AirConsole : MonoBehaviour
     {
         Physics.gravity.Set(0, 0, 0);
         PointsFloat = 0;
-        Points.text = PointsFloat + "%";
+//        Points.text = PointsFloat + "%";
         CheckSlow = false;
         CheckFast = false;
         Stunned = false;
@@ -241,7 +239,7 @@ public class Player_AirConsole : MonoBehaviour
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
                 PointsFloat += 0.1f;
-                Points.text = PointsFloat.ToString("F1") + " % ";
+//                Points.text = PointsFloat.ToString("F1") + " % ";
                 float scale = FatScale.x;
                 scale = scale + PointsFloat / 30;
                 Fat.transform.localScale = new Vector2(scale, scale);

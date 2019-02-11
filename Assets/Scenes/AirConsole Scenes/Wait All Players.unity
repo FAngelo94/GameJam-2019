@@ -179,6 +179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3771446021799173704, guid: 4d385d677b27c2d438e337050f569381,
+        type: 3}
+      propertyPath: browserStartMode
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d385d677b27c2d438e337050f569381, type: 3}
 --- !u!1 &692681788
@@ -528,7 +533,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1928175702}
   - component: {fileID: 1928175701}
-  - component: {fileID: 1928175700}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -536,14 +540,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1928175700
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928175699}
-  m_Enabled: 1
 --- !u!20 &1928175701
 Camera:
   m_ObjectHideFlags: 0

@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/AirConsole Scenes/AirConsoleTest.unity
     guid: 579a5e685d358384192c6fbaec00903d
   - enabled: 1
-    path: Assets/Scenes/Level1_AirConsoleTest.unity
+    path: Assets/Scenes/AirConsole Scenes/Level1_AirConsoleTest.unity
     guid: ffbfa6415a92b2642ba0882b1851879b
   m_configObjects: {}
