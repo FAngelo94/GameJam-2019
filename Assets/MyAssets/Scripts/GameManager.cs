@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //airconsole
-using NDream.AirConsole;
-using Newtonsoft.Json.Linq;
+//using NDream.AirConsole;
+//using Newtonsoft.Json.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        AirConsole.instance.onConnect += OnConnect;
-        AirConsole.instance.onDisconnect += OnDisconnect;
+//        AirConsole.instance.onConnect += OnConnect;
+//        AirConsole.instance.onDisconnect += OnDisconnect;
     }
 
     void Start()
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Panels.SetActive(false);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level1_AirConsoleTest");
     }
 
     public void Quit()
@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     }
 
     //AirConsole
+    /*
     void OnConnect(int device_id)
     {
         int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
@@ -70,5 +71,5 @@ public class GameManager : MonoBehaviour
     {
         int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
         if (devNum < 7) AirConsole.instance.SetActivePlayers(devNum);
-    }
+    }*/
 }
