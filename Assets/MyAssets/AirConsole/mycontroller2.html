@@ -76,6 +76,13 @@
 			airconsole.message(AirConsole.SCREEN, {key: "left", pressed:false})
 	}
 
+	function confirm (amount) {
+		var element = document.getElementById("confirm");
+		element.classList.toggle("isactive");
+		if(amount === 0)
+			airconsole.message(AirConsole.SCREEN, {key: "confirm", pressed:true})
+	}
+
 	
 
     </script>
@@ -87,10 +94,14 @@
 		html, body {
 			height: 100%;
 			width:100%;
+			background-color: grey;
+		}
+
+		.joypad, .confirm-button {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: grey;
+			margin: 20px 0;
 		}
 
 		.button {
@@ -121,6 +132,12 @@
 	</head>
 
 	<body onload="init()">
+		<div class="confirm-button">
+			<div id="confirm" class="button" ontouchstart="confirm(1)" ontouchend="confirm(0)">
+				OK
+			</div>
+		</div>
+		<div class="joypad">
 			<div class="left-button">
 			  <div id="left" class="button" ontouchstart="left(1)" ontouchend="left(0)">
 				  LEFT
@@ -139,5 +156,6 @@
 				  RIGHT
 			  </div>
 			</div>
+		</div>
 	</body>
 </html>

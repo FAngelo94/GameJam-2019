@@ -239,7 +239,7 @@ public class Player_AirConsole : MonoBehaviour
             {
                 Pizza.GetComponent<Pizza>().DecrementPizza();
                 PointsFloat += 0.1f;
-//                Points.text = PointsFloat.ToString("F1") + " % ";
+                
                 float scale = FatScale.x;
                 scale = scale + PointsFloat / 30;
                 Fat.transform.localScale = new Vector2(scale, scale);

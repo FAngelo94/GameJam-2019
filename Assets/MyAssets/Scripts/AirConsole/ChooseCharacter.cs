@@ -8,23 +8,40 @@ public class ChooseCharacter : MonoBehaviour
 {
     [Header("Player ID")]
     public int PlayerID;
-    [Header("Choose Player Component")]
-    public GameObject Player;
 
-    private int IndexPlayer;
+    private int MaxCharacter = 7;//numero dei personaggi giocabili
+    private int IndexCharacter;
+    private int OldIndex;
+    private bool IsConfirmed;
+
+    void Awake()
+    {
+        AirConsole.instance.onMessage += OnMessage;
+    }
+
+    void OnDestroy()
+    {
+        // unregister airconsole events on scene change
+        if (AirConsole.instance != null)
+        {
+            AirConsole.instance.onMessage -= OnMessage;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        IndexPlayer = 0;
+        IndexCharacter = 1;
+        OldIndex = IndexCharacter;
+        IsConfirmed = false;
     }
 
     //AirConsole Functions
     void OnMessage(int device_id, JToken data)
     {
         int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber(device_id);
-
-        if (active_player == PlayerID)
+        Debug.Log("active_player=" + active_player + " - confirmed=" + IsConfirmed);
+        if (active_player == PlayerID && !IsConfirmed)
         {
             if (data != null &&
                 data["key"] != null &&
@@ -36,12 +53,21 @@ public class ChooseCharacter : MonoBehaviour
                     Debug.Log("IF");
                     if (key.Equals("right"))
                     {
+                        IndexCharacter++;
+                        if (IndexCharacter > MaxCharacter)
+                            IndexCharacter = 1;
+                        ChangeCharacter();
                     }
                     if (key.Equals("left"))
                     {
+                        IndexCharacter--;
+                        if (IndexCharacter < 1)
+                            IndexCharacter = MaxCharacter;
+                        ChangeCharacter();
                     }
                     if (key.Equals("confirm"))
                     {
+                        ChoosePlayer(active_player);
                     }
                 }
             }
@@ -50,11 +76,16 @@ public class ChooseCharacter : MonoBehaviour
 
     private void ChangeCharacter()
     {
-
+        string nameSprite = "Character " + OldIndex;
+        transform.Find(nameSprite).gameObject.SetActive(false);
+        nameSprite = "Character " + IndexCharacter;
+        transform.Find(nameSprite).gameObject.SetActive(true);
+        OldIndex = IndexCharacter;
     }
 
-    private void ChoosePlayer()
+    private void ChoosePlayer(int active_player)
     {
-        ChooseCharacterManager.instance.ConfirmPlayer();
+        ChooseCharacterManager.instance.ConfirmPlayer(active_player, IndexCharacter - 1);
+        IsConfirmed = true;
     }
 }

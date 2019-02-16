@@ -23,7 +23,7 @@ public class PlayerSpawn : MonoBehaviour
     public void SpawnPlayer()
     {
         int playerNum = AirConsole.instance.GetActivePlayerDeviceIds.Count;
-Debug.Log(playerNum + " player in game");
+        Debug.Log(playerNum + " player in game");
         if (playerNum < 1 || playerNum > 7) return;
 
         //number of spawn locations
@@ -57,9 +57,11 @@ Debug.Log(playerNum + " player in game");
 
             //Sprite da cambiare in base alla selezione nella scena precedente!
             //un qualcosa tipo sostituire la "i" con GameManager.instance.Player[i].spriteSelection(), integer da 0 a 6 che identifica il personaggio.
-            player.GetComponent<SpriteRenderer>().sprite = spritesList[0 + 3*i];
-            player.transform.Find("Fat").gameObject.GetComponent<SpriteRenderer>().sprite = spritesList[1 + 3*i];
-            player.transform.Find("Hands").gameObject.GetComponent<SpriteRenderer>().sprite = spritesList[2 + 3*i];
+            int index = ChooseCharacterManager.instance.GetChoosen(i);
+            player.GetComponent<SpriteRenderer>().sprite = spritesList[0 + 3 * index];
+            player.transform.Find("Fat").gameObject.GetComponent<SpriteRenderer>().sprite = spritesList[1 + 3 * index];
+            player.transform.Find("Hands").gameObject.GetComponent<SpriteRenderer>().sprite = spritesList[2 + 3 * index];
+            player.name = "Player " + (i + 1);
         }
     }
 }

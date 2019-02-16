@@ -7,7 +7,7 @@ public class ButtonControl : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Characters");
+        SceneManager.LoadScene("ChoosePlayer");
     }
 
     public void GoToOptions()

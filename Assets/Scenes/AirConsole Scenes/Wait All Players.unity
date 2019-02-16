@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 3771446021799173704, guid: 4d385d677b27c2d438e337050f569381,
         type: 3}
       propertyPath: browserStartMode
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d385d677b27c2d438e337050f569381, type: 3}
