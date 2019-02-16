@@ -37,12 +37,12 @@
       } else if (player_number == 6) {
           message = "You are the player 6";
       };
-	  alert(message);
+	  //alert(message);
 	}
 
 	function up (amount) {
 		var element = document.getElementById("up");
-		element.classList.toggle("isactive");
+		element.classList.toggle("is-active");
 		if(amount === 1)
 			airconsole.message(AirConsole.SCREEN, {key: "up", pressed:true})
 		else
@@ -51,7 +51,7 @@
 
 	function down (amount) {
 		var element = document.getElementById("down");
-		element.classList.toggle("isactive");
+		element.classList.toggle("is-active");
 		if(amount === 1)
 			airconsole.message(AirConsole.SCREEN, {key: "down", pressed:true})
 		else
@@ -60,7 +60,7 @@
 
 	function right (amount) {
 		var element = document.getElementById("right");
-		element.classList.toggle("isactive");
+		element.classList.toggle("is-active");
 		if(amount === 1)
 			airconsole.message(AirConsole.SCREEN, {key: "right", pressed:true})
 		else
@@ -69,7 +69,7 @@
 
 	function left (amount) {
 		var element = document.getElementById("left");
-		element.classList.toggle("isactive");
+		element.classList.toggle("is-active");
 		if(amount === 1)
 			airconsole.message(AirConsole.SCREEN, {key: "left", pressed:true})
 		else
@@ -78,9 +78,11 @@
 
 	function confirm (amount) {
 		var element = document.getElementById("confirm");
-		element.classList.toggle("isactive");
-		if(amount === 0)
+		element.classList.toggle("is-active");
+		if(amount === 0){
 			airconsole.message(AirConsole.SCREEN, {key: "confirm", pressed:true})
+			element.classList.toggle("is-hidden");
+		}
 	}
 
 	
@@ -95,6 +97,10 @@
 			height: 100%;
 			width:100%;
 			background-color: grey;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.joypad, .confirm-button {
@@ -119,7 +125,7 @@
 			width: 100px;
 		}
 
-		.button.isactive {
+		.button.is-active {
 			background-color:#ff0000;
 			height: 101px;
 			width: 101px;
@@ -127,6 +133,10 @@
         
 		.up {
 			margin-bottom: 40px;
+		}
+
+		.is-hidden {
+			visibility: hidden;
 		}
 		</style>
 	</head>

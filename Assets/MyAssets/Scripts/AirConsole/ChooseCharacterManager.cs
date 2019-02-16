@@ -34,7 +34,7 @@ public class ChooseCharacterManager : MonoBehaviour
         PlayerChoosen[active_player] = index_character;
         if (CountConfirm == totalPlayer)
         {//Start the game
-
+            StartGame();
         }
     }
 

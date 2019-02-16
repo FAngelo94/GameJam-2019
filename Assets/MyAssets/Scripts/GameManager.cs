@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePoints(string player, float points)
     {
-        Debug.Log("POINTS - " + player + "=" + points);
         Points[player] = points.ToString();
     }
 
