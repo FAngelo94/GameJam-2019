@@ -36,9 +36,22 @@ public class GameManager : MonoBehaviour
         Panels.SetActive(true);
         for(int i = 0; i < 7; i++)
         {
+            //Set the dimension of pizza
             RectTransform r = Panels.transform.Find("Player " + (i + 1)).GetComponent<RectTransform>();
             r.localScale = new Vector2(r.localScale.x, 1 - r.localScale.y / 100 * float.Parse(Points["Player " + (i + 1)]));
             Panels.transform.Find("Point " + (i + 1)).GetComponent<Text>().text = float.Parse(Points["Player " + (i + 1)]).ToString("F1") + "%";
+            //Set sprite
+            GameObject character = Panels.transform.Find("Character " + (i + 1)).gameObject;
+            int spriteIndex = ChooseCharacterManager.instance.GetChoosen(i);
+            //disable all sprite
+            for(int j = 0; j < 7; j++)
+            {
+                GameObject s = character.transform.Find("Sprite " + (j + 1)).gameObject;
+                s.SetActive(false);
+            }
+            //active only the selected sprite
+            GameObject sprite = character.transform.Find("Sprite " + (spriteIndex+1)).gameObject;
+            sprite.SetActive(true);
         }
 
     }
