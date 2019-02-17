@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114176160131598248}
-  - {fileID: 114478409264965306}
-  - {fileID: 114981497699146080}
-  - {fileID: 114228377461773248}
+  - {fileID: 114516844484899162}
+  - {fileID: 114440207735128744}
+  - {fileID: 114761219265614862}
   EditorEvents:
   - {fileID: 114394778451320490}
   - {fileID: 114491057000690444}
@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 114306767194774648}
   StringsBanks:
   - {fileID: 114176160131598248}
-  stringsBankWriteTime: 636841854541322939
+  stringsBankWriteTime: 636841884587610858
   cacheVersion: 3
 --- !u!114 &114044521923462362
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMod\Master Bank.strings.bank
-  lastModified: 636841854541322939
+  lastModified: 636841884587610858
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -102,7 +102,7 @@ MonoBehaviour:
   Path: event:/sfx_Start_Pizza
   guid: b232d04508c25145bb1e08670fa802ac
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -163,13 +163,13 @@ MonoBehaviour:
   Path: event:/Music_Play
   guid: f826c3307167d045bcec884df5faed68
   Banks:
-  - {fileID: 114981497699146080}
+  - {fileID: 114440207735128744}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114044521923462362}
-  - {fileID: 114828598963785924}
+  - {fileID: 114999541708982520}
+  - {fileID: 114962678898190368}
   MinDistance: 1
   MaxDistance: 20
   Length: 70666
@@ -188,7 +188,7 @@ MonoBehaviour:
   Path: event:/sfx_Footstep_Wet
   guid: dced2817dc6b714f8cd9f03784345462
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -281,7 +281,7 @@ MonoBehaviour:
   Path: event:/sfx_Hit_Generic
   guid: 582cac14e9438840aa05915700862299
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -324,6 +324,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114440207735128744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Matteo\Unity\PizzaAPizze\FMod\Music.bank
+  lastModified: 636841884587871518
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2097856
+  Exists: 1
 --- !u!114 &114461798629858830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +393,7 @@ MonoBehaviour:
   Path: event:/sfx_Hit_Pizza
   guid: e37005d300c2d84f80cb386b90629653
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -382,6 +401,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3205
+--- !u!114 &114516844484899162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Matteo\Unity\PizzaAPizze\FMod\SFX.bank
+  lastModified: 636841884588232894
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 527232
+  Exists: 1
 --- !u!114 &114674282657363478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +435,7 @@ MonoBehaviour:
   Path: event:/sfx_Footsteps
   guid: b3cf6e76f09a00498e24ff67a4ca4203
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -439,7 +477,7 @@ MonoBehaviour:
   Path: event:/sfx_Footstep_Cloth
   guid: 66ba18244ff55d4e889f29dfa5686649
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -479,6 +517,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114761219265614862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Matteo\Unity\PizzaAPizze\FMod\Master Bank.bank
+  lastModified: 636841884587590776
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
 --- !u!114 &114828598963785924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +567,7 @@ MonoBehaviour:
   Path: event:/sfx_Tappeto
   guid: b6a71039ed5ba44d8b8052b80cb1c2cb
   Banks:
-  - {fileID: 114478409264965306}
+  - {fileID: 114516844484899162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -518,6 +575,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 468
+--- !u!114 &114962678898190368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: End
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114981497699146080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,3 +610,19 @@ MonoBehaviour:
   - Name: 
     Value: 2097856
   Exists: 1
+--- !u!114 &114999541708982520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Pizza_Taken
+  Min: 0
+  Max: 1
+  Default: 0
