@@ -257,6 +257,7 @@ public class Player_AirConsole : MonoBehaviour
     void OnMessage(int device_id, JToken data)
     {
         int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber(device_id);
+        Debug.Log("DATA=" + data);
 
         if (active_player == PlayerID)
         {

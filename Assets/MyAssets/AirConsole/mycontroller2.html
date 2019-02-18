@@ -1,171 +1,310 @@
-
 <html>
+
 <head>
-    <script type="text/javascript"
-            src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
+    <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
     <script type="text/javascript">
+        var airconsole;
+        /**
+         * Sets up the communication to the screen.
+         */
+        function init() {
+            airconsole = new AirConsole({ orientation: "landscape" });
 
-    var airconsole;
-    /**
-     * Sets up the communication to the screen.
-     */
-    function init() {
-      airconsole = new AirConsole({"orientation": "portrait"});
-     
-      airconsole.onActivePlayersChange = function(player_number) {
-        updateText(player_number);
-      }
-      airconsole.onReady = function() {
-        updateText();
-      }
-    }
+            airconsole.onActivePlayersChange = function (player_number) {
+                updateText(player_number);
+            };
+            airconsole.onReady = function () {
+                updateText();
+            };
+        }
+        function updateText(player_number) {
+            var message = "";
+            if (player_number == 0) {
+                message = "You are the player 0";
+            } else if (player_number == 1) {
+                message = "You are the player 1";
+            } else if (player_number == 2) {
+                message = "You are the player 2";
+            } else if (player_number == 3) {
+                message = "You are the player 3";
+            } else if (player_number == 4) {
+                message = "You are the player 4";
+            } else if (player_number == 5) {
+                message = "You are the player 5";
+            } else if (player_number == 6) {
+                message = "You are the player 6";
+            }
+            //alert(message);
+        }
+        function diagonal(direction, amount) {
+            if (amount === 0) {
+                up(0);
+                down(0);
+                left(0);
+                right(0);
+                var element = document.getElementById("up-left");
+                element.classList.remove("is-active");
+                element = document.getElementById("up-right");
+                element.classList.remove("is-active");
+                element = document.getElementById("down-left");
+                element.classList.remove("is-active");
+                element = document.getElementById("down-right");
+                element.classList.remove("is-active");
+            } else {
+                if (direction === "up-left") {
+                    var element = document.getElementById("up-left");
+                    element.classList.add("is-active");
+                    up(1);
+                    left(1);
+                }
+                if (direction === "up-right") {
+                    var element = document.getElementById("up-right");
+                    element.classList.add("is-active");
+                    up(1);
+                    right(1);
+                }
+                if (direction === "down-left") {
+                    var element = document.getElementById("down-left");
+                    element.classList.add("is-active");
+                    down(1);
+                    left(1);
+                }
+                if (direction === "down-right") {
+                    var element = document.getElementById("down-right");
+                    element.classList.add("is-active");
+                    down(1);
+                    right(1);
+                }
+            }
+        }
 
-	function updateText(player_number) {
-	var message="";
-      if (player_number == 0) {
-        message = "You are the player 0";
-      } else if (player_number == 1) {
-        message = "You are the player 1";
-      } else if (player_number == 2) {
-          message = "You are the player 2";
-      } else if (player_number == 3) {
-          message = "You are the player 3";
-      } else if (player_number == 4) {
-          message = "You are the player 4";
-      } else if (player_number == 5) {
-          message = "You are the player 5";
-      } else if (player_number == 6) {
-          message = "You are the player 6";
-      };
-	  //alert(message);
-	}
+        function up(amount) {
+            var element = document.getElementById("up");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: true });
+                element.classList.add("is-active");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
+                element.classList.remove("is-active");
+            }
+        }
+        function down(amount) {
+            var element = document.getElementById("down");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: true });
+                element.classList.add("is-active");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "down",
+                    pressed: false
+                });
+                element.classList.remove("is-active");
+            }
+        }
+        function right(amount) {
+            var element = document.getElementById("right");
 
-	function up (amount) {
-		var element = document.getElementById("up");
-		element.classList.toggle("is-active");
-		if(amount === 1)
-			airconsole.message(AirConsole.SCREEN, {key: "up", pressed:true})
-		else
-			airconsole.message(AirConsole.SCREEN, {key: "up", pressed:false})
-	}
-
-	function down (amount) {
-		var element = document.getElementById("down");
-		element.classList.toggle("is-active");
-		if(amount === 1)
-			airconsole.message(AirConsole.SCREEN, {key: "down", pressed:true})
-		else
-			airconsole.message(AirConsole.SCREEN, {key: "down", pressed:false})
-	}
-
-	function right (amount) {
-		var element = document.getElementById("right");
-		element.classList.toggle("is-active");
-		if(amount === 1)
-			airconsole.message(AirConsole.SCREEN, {key: "right", pressed:true})
-		else
-			airconsole.message(AirConsole.SCREEN, {key: "right", pressed:false})
-	}
-
-	function left (amount) {
-		var element = document.getElementById("left");
-		element.classList.toggle("is-active");
-		if(amount === 1)
-			airconsole.message(AirConsole.SCREEN, {key: "left", pressed:true})
-		else
-			airconsole.message(AirConsole.SCREEN, {key: "left", pressed:false})
-	}
-
-	function confirm (amount) {
-		var element = document.getElementById("confirm");
-		element.classList.toggle("is-active");
-		if(amount === 0){
-			airconsole.message(AirConsole.SCREEN, {key: "confirm", pressed:true})
-			element.classList.toggle("is-hidden");
-		}
-	}
-
-	
-
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "right",
+                    pressed: true
+                });
+                element.classList.add("is-active");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "right",
+                    pressed: false
+                });
+                element.classList.remove("is-active");
+            }
+        }
+        function left(amount) {
+            var element = document.getElementById("left");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: true });
+                element.classList.add("is-active");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "left",
+                    pressed: false
+                });
+                element.classList.remove("is-active");
+            }
+        }
+        function confirm(amount) {
+            var element = document.getElementById("confirm");
+            element.classList.toggle("is-active");
+            if (amount === 0) {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "confirm",
+                    pressed: true
+                });
+                element.classList.toggle("is-hidden");
+            }
+        }
     </script>
-	   <style type="text/css">
-		@font-face {
-			font-family: 'Arial';
-		}
+    <style type="text/css">
+        @font-face {
+            font-family: "Arial";
+        }
 
-		html, body {
-			height: 100%;
-			width:100%;
-			background-color: grey;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-		.joypad, .confirm-button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 20px 0;
-		}
+        .joypad {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
 
-		.button {
-			display:flex;
-			justify-content: center;
-			align-items: center;
-			background-color:#000000;
-			-moz-border-radius:42px;
-			-webkit-border-radius:42px;
-			border-radius:100%;
-			color:#ffffff;
-			font-family:Georgia;
-			font-size:20px;
-			height: 100px;
-			width: 100px;
-		}
+        .joypad-col {
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex: 25%;
+            height: 100%;
+        }
 
-		.button.is-active {
-			background-color:#ff0000;
-			height: 101px;
-			width: 101px;
-		}
-        
-		.up {
-			margin-bottom: 40px;
-		}
+        .joypad-col.center {
+            flex: 50%;
+        }
 
-		.is-hidden {
-			visibility: hidden;
-		}
-		</style>
-	</head>
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Georgia;
+            font-size: 20px;
+            height: 33%;
+            width: 99%;
+            box-sizing: border-box;
+            /*-moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;*/
+        }
 
-	<body onload="init()">
-		<div class="confirm-button">
-			<div id="confirm" class="button" ontouchstart="confirm(1)" ontouchend="confirm(0)">
-				OK
-			</div>
-		</div>
-		<div class="joypad">
-			<div class="left-button">
-			  <div id="left" class="button" ontouchstart="left(1)" ontouchend="left(0)">
-				  LEFT
-			  </div>
-			</div>
-			<div class="center-button">
-			  <div id="up" class="button up" ontouchstart="up(1)"  ontouchend="up(0)">
-				  UP
-			  </div>
-			  <div id="down" class="button" ontouchstart="down(1)" ontouchend="down(0)">
-				  DOWN
-			  </div>
-			</div>
-			<div class="right-button">
-        		<div id="right" class="button" ontouchstart="right(1)" ontouchend="right(0)">
-				  RIGHT
-			  </div>
-			</div>
-		</div>
-	</body>
+        .button.is-active {
+            border: 10px solid red;
+        }
+
+        .is-hidden {
+            visibility: hidden;
+        }
+
+        .arrow-confirm {
+            border: solid green;
+            border-width: 0 15px 15px 0;
+            display: inline-block;
+            padding: 15px;
+            padding-bottom: 5px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .arrow {
+            border: solid red;
+            border-width: 0 10px 10px 0;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .a-right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .a-left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .a-up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .a-down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .a-up-left {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
+
+        .a-down-left {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+        }
+
+        .a-up-right {
+            transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+        }
+
+        .a-down-right {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <div class="joypad">
+        <div class="joypad-col">
+            <div id="up-left" class="button" ontouchstart="diagonal('up-left',1)" ontouchend="diagonal('up-left',0)">
+                <div class="arrow a-up-left"></div>
+            </div>
+            <div id="left" class="button" ontouchstart="left(1)" ontouchend="left(0)">
+                <div class="arrow a-left"></div>
+            </div>
+            <div id="down-left" class="button" ontouchstart="diagonal('down-left',1)"
+                ontouchend="diagonal('down-left',0)">
+                <div class="arrow a-down-left"></div>
+            </div>
+        </div>
+        <div class="joypad-col center">
+            <div id="up" class="button up" ontouchstart="up(1)" ontouchend="up(0)">
+                <div class="arrow a-up"></div>
+            </div>
+            <div id="confirm" class="button" ontouchstart="confirm(1)" ontouchend="confirm(0)">
+                <div class="arrow-confirm"></div>
+            </div>
+            <div id="down" class="button" ontouchstart="down(1)" ontouchend="down(0)">
+                <div class="arrow a-down"></div>
+            </div>
+        </div>
+        <div class="joypad-col">
+            <div id="up-right" class="button" ontouchstart="diagonal('up-right',1)" ontouchend="diagonal('up-right',0)">
+                <div class="arrow a-up-right"></div>
+            </div>
+            <div id="right" class="button" ontouchstart="right(1)" ontouchend="right(0)">
+                <div class="arrow a-right"></div>
+            </div>
+            <div id="down-right" class="button" ontouchstart="diagonal('down-right',1)"
+                ontouchend="diagonal('down-right',0)">
+                <div class="arrow a-down-right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
