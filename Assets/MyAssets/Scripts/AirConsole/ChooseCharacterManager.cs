@@ -12,6 +12,7 @@ public class ChooseCharacterManager : MonoBehaviour
     public GameObject Graphics;
 
     private int CountConfirm;
+    public void ResetCountConfirm() { CountConfirm = 0; }
     private int[] PlayerChoosen;
 
     public Sprite connected;
@@ -36,6 +37,7 @@ public class ChooseCharacterManager : MonoBehaviour
         CountConfirm = 0;
         PlayerChoosen = new int[7];
     }
+
 
     private void Update()
     {

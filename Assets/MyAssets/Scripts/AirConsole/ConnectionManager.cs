@@ -10,7 +10,7 @@ public class ConnectionManager : MonoBehaviour
 
     void Awake()
     {
-        playerCount = 0;
+        playerCount = AirConsole.instance.GetActivePlayerDeviceIds.Count;
         AirConsole.instance.onConnect += OnConnect;
         AirConsole.instance.onDisconnect += OnDisconnect;
     }
@@ -35,7 +35,7 @@ public class ConnectionManager : MonoBehaviour
         {
             int playerID = AirConsole.instance.ConvertDeviceIdToPlayerNumber(devID);
 
-//          Debug.Log(playerID);
+            //Debug.Log(playerID);
 
             playerCount++;
         }

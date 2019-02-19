@@ -268,7 +268,6 @@ public class Player_AirConsole : MonoBehaviour
                 string key = key = (string)data["key"];
                 if ((bool)data["pressed"])
                 {
-                    Debug.Log("IF");
                     if (key.Equals("up")) moveUp = true;
                     if (key.Equals("down")) moveDown = true;
                     if (key.Equals("right")) moveRight = true;
@@ -276,7 +275,6 @@ public class Player_AirConsole : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("ELSE");
                     if (key.Equals("up")) moveUp = false;
                     if (key.Equals("down")) moveDown = false;
                     if (key.Equals("right")) moveRight = false;

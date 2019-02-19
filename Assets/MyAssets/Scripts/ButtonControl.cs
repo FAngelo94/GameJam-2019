@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NDream.AirConsole;
 
 public class ButtonControl : MonoBehaviour
 {
     public void StartGame()
     {
+        AirConsole.instance.SetActivePlayers();
         SceneManager.LoadScene("ChoosePlayer");
     }
 
