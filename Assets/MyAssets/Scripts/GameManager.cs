@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         ChooseCharacterManager.instance.ResetCountConfirm();
         Panels.SetActive(false);
         SceneManager.LoadScene("MainMenu");
+        //Application.Quit();
     }
 
     //AirConsole
