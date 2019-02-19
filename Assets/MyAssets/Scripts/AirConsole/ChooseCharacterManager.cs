@@ -66,7 +66,7 @@ public class ChooseCharacterManager : MonoBehaviour
 
     void UpdateGUI(int players)
     {
-Debug.Log(players);
+        Debug.Log(players);
 
         //player message and start button
         string mtext = "";
@@ -80,7 +80,6 @@ Debug.Log(players);
 
         startBtn.gameObject.SetActive(btnOn);
         message.text = mtext;
-
         for (int i = 0; i < 7; i++)
         {
             if (i < players)
