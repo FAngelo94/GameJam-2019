@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public void TheEnd()
     {
         SceneManager.LoadScene("TheEnd");
+        AudioManager.instance.StartMenuMusic();
         Panels.SetActive(true);
         for(int i = 0; i < 7; i++)
         {
@@ -65,6 +66,9 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Panels.SetActive(false);
+        AudioManager.instance.StopMenuMusic();
+        AudioManager.instance.PlaySoundOnce(SoundEvent.StartLevel, transform.position);
+        //AudioManager.instance.StartLevelMusic();
         SceneManager.LoadScene("Level1_AirConsoleTest");
     }
 
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
     {
         ChooseCharacterManager.instance.ResetCountConfirm();
         Panels.SetActive(false);
+        AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
         SceneManager.LoadScene("MainMenu");
         //Application.Quit();
     }

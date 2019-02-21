@@ -63,6 +63,9 @@ public class ChooseCharacterManager : MonoBehaviour
     public void StartGame()
     {
         Graphics.SetActive(false);
+        AudioManager.instance.StopMenuMusic();
+        AudioManager.instance.PlaySoundOnce(SoundEvent.StartLevel, transform.position);
+        //AudioManager.instance.StartLevelMusic();
         SceneManager.LoadScene("Level1_AirConsoleTest");
     }
 
@@ -88,11 +91,13 @@ public class ChooseCharacterManager : MonoBehaviour
             {
                 connectedPlayers[i].GetComponent<Image>().sprite = connected;
                 connectedPlayers[i].transform.Find("Player").gameObject.SetActive(true);
+                connectedPlayers[i].transform.Find("PlayerNumber").gameObject.SetActive(true);
             }
             else
             {
                 connectedPlayers[i].GetComponent<Image>().sprite = disconnected;
                 connectedPlayers[i].transform.Find("Player").gameObject.SetActive(false);
+                connectedPlayers[i].transform.Find("PlayerNumber").gameObject.SetActive(true);
             }
         }
     }

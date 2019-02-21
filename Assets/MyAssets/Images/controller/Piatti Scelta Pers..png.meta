@@ -1,0 +1,657 @@
+fileFormatVersion: 2
+guid: 51667b0be3a587d42a53c91831d4b630
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Piatti Scelta Pers._0
+    21300002: Piatti Scelta Pers._1
+    21300004: Piatti Scelta Pers._2
+    21300006: Piatti Scelta Pers._3
+    21300008: Piatti Scelta Pers._4
+    21300010: Piatti Scelta Pers._5
+    21300012: Piatti Scelta Pers._6
+    21300014: Piatti Scelta Pers._7
+    21300016: Piatti Scelta Pers._8
+    21300018: Piatti Scelta Pers._9
+    21300020: Piatti Scelta Pers._10
+    21300022: Piatti Scelta Pers._11
+    21300024: Piatti Scelta Pers._12
+    21300026: Piatti Scelta Pers._13
+    21300028: Piatti Scelta Pers._14
+    21300030: Piatti Scelta Pers._15
+    21300032: Piatti Scelta Pers._16
+    21300034: Piatti Scelta Pers._17
+    21300036: Piatti Scelta Pers._18
+    21300038: Piatti Scelta Pers._19
+    21300040: Piatti Scelta Pers._20
+    21300042: Piatti Scelta Pers._21
+    21300044: Piatti Scelta Pers._22
+    21300046: Piatti Scelta Pers._23
+    21300048: Piatti Scelta Pers._24
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._0
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 4723
+        width: 6045
+        height: 863
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef874b4fda35c14ebad248711a1d17b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._1
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 4062
+        width: 1172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48940150010a97649aa9b2946c5c55db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._2
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 4062
+        width: 1172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c03897a02b3b04394b2d9967e3a4a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._3
+      rect:
+        serializedVersion: 2
+        x: 6396
+        y: 4062
+        width: 1177
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c72248718553374f823c305da0c663f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._4
+      rect:
+        serializedVersion: 2
+        x: 9299
+        y: 4062
+        width: 1173
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e8c7f94d2efe94289bc6a233e69c72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2401
+        width: 288
+        height: 1580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7823c063b494240a3058f933da4926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._6
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 2363
+        width: 1635
+        height: 1624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49227731368e7474b8d1437edcfac2d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._7
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 2396
+        width: 205
+        height: 1590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e74f82c5e13d2a4d96de304808a4b14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._8
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 2401
+        width: 295
+        height: 1580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11c9d3d6ac40af45b16088dbd42c883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._9
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 2363
+        width: 1634
+        height: 1624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e178058c94b661540b0607cd64e79e58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._10
+      rect:
+        serializedVersion: 2
+        x: 4982
+        y: 2396
+        width: 204
+        height: 1590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1da3e1b0a7ffe49be92c71fb6afabd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._11
+      rect:
+        serializedVersion: 2
+        x: 5821
+        y: 2401
+        width: 297
+        height: 1580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267ae451cc7f4b24e84a197351c468f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._12
+      rect:
+        serializedVersion: 2
+        x: 6170
+        y: 2363
+        width: 1634
+        height: 1624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bab31f6e89cdb47a2dc190f1984ee0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._13
+      rect:
+        serializedVersion: 2
+        x: 7896
+        y: 2396
+        width: 204
+        height: 1590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d1b26490a6fe3469767989f57b3ef5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._14
+      rect:
+        serializedVersion: 2
+        x: 8740
+        y: 2401
+        width: 296
+        height: 1580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee72d997556c18844aa880e01d9e1534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._15
+      rect:
+        serializedVersion: 2
+        x: 9090
+        y: 2363
+        width: 1634
+        height: 1624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537c24bbb4f3b7e42ae3c986a1382ad3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._16
+      rect:
+        serializedVersion: 2
+        x: 10816
+        y: 2396
+        width: 196
+        height: 1590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ad2abb154e0e248aac59767ef0fada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._17
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1680
+        width: 1172
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf5bb43debc896408be495e38103ef8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._18
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 1680
+        width: 1177
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eab22127eaa22488105ec629cc698a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._19
+      rect:
+        serializedVersion: 2
+        x: 7805
+        y: 1680
+        width: 1177
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1315df43e24511c42954ea13ffc5f3e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._20
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 30
+        width: 296
+        height: 1580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f8d3e38e6a271429e5aee78f8ebc34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._21
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 0
+        width: 1629
+        height: 1616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbde0c1dd3d50514796115d2e00f26b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._22
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 0
+        width: 5060
+        height: 1616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd48302c489ac2d43a06bdfa1336cba8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._23
+      rect:
+        serializedVersion: 2
+        x: 7585
+        y: 0
+        width: 1634
+        height: 1616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acc0dc09e831a1428d68500a5212370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piatti Scelta Pers._24
+      rect:
+        serializedVersion: 2
+        x: 9310
+        y: 24
+        width: 204
+        height: 1591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56569adad139f0458e1a8a49c973222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3884ec86ff27f684aa32e6e11cfeb105
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -34,22 +34,26 @@ public class Pizza : MonoBehaviour
         //        Debug.Log(PizzaPanel.localScale);
         PizzaPanel.localScale = new Vector2(1 - Width / 100 * BoxRemain, 1);
 
-        if (BoxRemain <= 3 && endMusic)
-        {
-            endMusic = false;
-            MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("End", 1);
-        }
+        //        if (BoxRemain <= 3 && endMusic)
+        //        {
+        //            endMusic = false;
+        //            MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("End", 1);
+        //        }
         if (BoxRemain <= 0)
+        {
+//            AudioManager.instance.StopLevelMusic();
             GameManager.instance.TheEnd();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!PizzaTaken && collision.tag.Equals("Player"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot(GrabEvent, transform.position);
-
+            //FMODUnity.RuntimeManager.PlayOneShot(GrabEvent, transform.position);
             MusicPlayer.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Pizza_Taken", 1);
+            //AudioManager.instance.setLevelMusicParam(1.0f);
+            AudioManager.instance.PlaySoundOnce(SoundEvent.GrabPizza, transform.position);
 
             collision.GetComponent<Player_AirConsole>().AddPizza(gameObject);
             PizzaTaken = true;

@@ -179,6 +179,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: ButtonSoundEvent
+      value: event:/sfx_Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: StartEvent
+      value: event:/sfx_Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: MenuMusicEvent
+      value: event:/Music_Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: MenuAmbienceEvent
+      value: event:/Menu_Ambience
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: GameMusicIntroEvent
+      value: event:/Music_Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: GameMusicEvent
+      value: event:/Music_Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833835997264537583, guid: 15765a4b935989b45abdce974ec4b013,
+        type: 3}
+      propertyPath: VictoryEvent
+      value: event:/sfx_Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527471364, guid: 15765a4b935989b45abdce974ec4b013, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15765a4b935989b45abdce974ec4b013, type: 3}
 --- !u!1 &815729225
@@ -300,7 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1871130925}
   - component: {fileID: 1871130924}
-  - component: {fileID: 1871130923}
   - component: {fileID: 1871130926}
   m_Layer: 0
   m_Name: Main Camera
@@ -309,14 +347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1871130923
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871130922}
-  m_Enabled: 0
 --- !u!20 &1871130924
 Camera:
   m_ObjectHideFlags: 0
