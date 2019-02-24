@@ -42,36 +42,28 @@
                 down(0);
                 left(0);
                 right(0);
-                var element = document.getElementById("up-left");
-                element.classList.remove("is-active");
-                element = document.getElementById("up-right");
-                element.classList.remove("is-active");
-                element = document.getElementById("down-left");
-                element.classList.remove("is-active");
-                element = document.getElementById("down-right");
-                element.classList.remove("is-active");
+				document.getElementById("up-left").src="http://www.cyberpills.net/Falci/MammaMia/AltoSx%20Verde.png";
+				document.getElementById("up-right").src="http://www.cyberpills.net/Falci/MammaMia/AltoDx%20Verde.png";
+				document.getElementById("down-left").src="http://www.cyberpills.net/Falci/MammaMia/BassoSx%20Verde.png";
+				document.getElementById("down-right").src="http://www.cyberpills.net/Falci/MammaMia/BasspDx%20Verde.png";
             } else {
                 if (direction === "up-left") {
-                    var element = document.getElementById("up-left");
-                    element.classList.add("is-active");
+                    document.getElementById("up-left").src="http://www.cyberpills.net/Falci/MammaMia/AltoSx%20Rosso.png";
                     up(1);
                     left(1);
                 }
                 if (direction === "up-right") {
-                    var element = document.getElementById("up-right");
-                    element.classList.add("is-active");
+                    document.getElementById("up-right").src="http://www.cyberpills.net/Falci/MammaMia/AltoDx%20Rosso.png";
                     up(1);
                     right(1);
                 }
                 if (direction === "down-left") {
-                    var element = document.getElementById("down-left");
-                    element.classList.add("is-active");
+                    document.getElementById("down-left").src="http://www.cyberpills.net/Falci/MammaMia/BassoSx%20Rosso.png";
                     down(1);
                     left(1);
                 }
                 if (direction === "down-right") {
-                    var element = document.getElementById("down-right");
-                    element.classList.add("is-active");
+                    document.getElementById("down-right").src="http://www.cyberpills.net/Falci/MammaMia/BassoDx%20Rosso.png";
                     down(1);
                     right(1);
                 }
@@ -82,67 +74,68 @@
             var element = document.getElementById("up");
             if (amount === 1) {
                 airconsole.message(AirConsole.SCREEN, { key: "up", pressed: true });
-                element.classList.add("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleAlto%20Rosso.png";
             }
             else {
                 airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
-                element.classList.remove("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleAlto%20Verde.png";
             }
         }
         function down(amount) {
             var element = document.getElementById("down");
             if (amount === 1) {
                 airconsole.message(AirConsole.SCREEN, { key: "down", pressed: true });
-                element.classList.add("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleBasso%20Rosso.png";
             }
             else {
                 airconsole.message(AirConsole.SCREEN, {
                     key: "down",
                     pressed: false
                 });
-                element.classList.remove("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleBasso%20Verde.png";
             }
         }
         function right(amount) {
             var element = document.getElementById("right");
-
             if (amount === 1) {
                 airconsole.message(AirConsole.SCREEN, {
                     key: "right",
                     pressed: true
                 });
-                element.classList.add("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleDx%20Rosso.png";
             }
             else {
                 airconsole.message(AirConsole.SCREEN, {
                     key: "right",
                     pressed: false
                 });
-                element.classList.remove("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleDx%20Verde.png";
             }
         }
         function left(amount) {
             var element = document.getElementById("left");
             if (amount === 1) {
                 airconsole.message(AirConsole.SCREEN, { key: "left", pressed: true });
-                element.classList.add("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleSx%20Rosso.png";
             }
             else {
                 airconsole.message(AirConsole.SCREEN, {
                     key: "left",
                     pressed: false
                 });
-                element.classList.remove("is-active");
+                element.src="http://www.cyberpills.net/Falci/MammaMia/CentraleSx%20Verde.png";
             }
         }
         function confirm(amount) {
             var element = document.getElementById("confirm");
-            element.classList.toggle("is-active");
+			if(amount==1)
+				element.src="http://www.cyberpills.net/Falci/MammaMia/Centrale%20Rosso.png";
             if (amount === 0) {
                 airconsole.message(AirConsole.SCREEN, {
                     key: "confirm",
                     pressed: true
                 });
+				element.src="http://www.cyberpills.net/Falci/MammaMia/Centrale%20Verde.png";
             }
         }
     </script>
@@ -156,7 +149,6 @@
             height: 100%;
             width: 100%;
             margin: 0;
-            background-color: grey;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -188,80 +180,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Georgia;
-            font-size: 20px;
-            height: 33%;
-            width: 99%;
-            box-sizing: border-box;
-            /*-moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;*/
-        }
-
-        .button.is-active {
-            border: 10px solid red;
+            height: 33.4%;
+            width: 100%;
+            border: red solid 1px;
+			background-color: white;
         }
 
         .is-hidden {
             visibility: hidden;
         }
 
-        .arrow-confirm {
-            border: solid green;
-            border-width: 0 15px 15px 0;
-            display: inline-block;
-            padding: 15px;
-            padding-bottom: 5px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-
         .arrow {
-            border: solid red;
-            border-width: 0 10px 10px 0;
-            display: inline-block;
-            padding: 10px;
-        }
-
-        .a-right {
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-        }
-
-        .a-left {
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-        }
-
-        .a-up {
-            transform: rotate(-135deg);
-            -webkit-transform: rotate(-135deg);
-        }
-
-        .a-down {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-
-        .a-up-left {
-            transform: rotate(180deg);
-            -webkit-transform: rotate(180deg);
-        }
-
-        .a-down-left {
-            transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-        }
-
-        .a-up-right {
-            transform: rotate(270deg);
-            -webkit-transform: rotate(270deg);
-        }
-
-        .a-down-right {
-            transform: rotate(0deg);
-            -webkit-transform: rotate(0deg);
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -269,38 +200,38 @@
 <body onload="init()">
     <div class="joypad">
         <div class="joypad-col">
-            <div id="up-left" class="button" ontouchstart="diagonal('up-left',1)" ontouchend="diagonal('up-left',0)">
-                <div class="arrow a-up-left"></div>
+            <div class="button" ontouchstart="diagonal('up-left',1)" ontouchend="diagonal('up-left',0)">
+                <img id="up-left" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/AltoSx%20Verde.png"/>
             </div>
-            <div id="left" class="button" ontouchstart="left(1)" ontouchend="left(0)">
-                <div class="arrow a-left"></div>
+            <div class="button" ontouchstart="left(1)" ontouchend="left(0)">
+                <img id="left" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/CentraleSx%20Verde.png"/>
             </div>
-            <div id="down-left" class="button" ontouchstart="diagonal('down-left',1)"
+            <div class="button" ontouchstart="diagonal('down-left',1)"
                 ontouchend="diagonal('down-left',0)">
-                <div class="arrow a-down-left"></div>
+                <img id="down-left" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/BassoSx%20Verde.png"/>
             </div>
         </div>
         <div class="joypad-col center">
-            <div id="up" class="button up" ontouchstart="up(1)" ontouchend="up(0)">
-                <div class="arrow a-up"></div>
+            <div class="button up" ontouchstart="up(1)" ontouchend="up(0)">
+                <img id="up" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/CentraleAlto%20Verde.png"/>
             </div>
-            <div id="confirm" class="button" ontouchstart="confirm(1)" ontouchend="confirm(0)">
-                <div class="arrow-confirm"></div>
+            <div class="button" ontouchstart="confirm(1)" ontouchend="confirm(0)">
+                <img id="confirm" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/Centrale%20Verde.png"/>
             </div>
-            <div id="down" class="button" ontouchstart="down(1)" ontouchend="down(0)">
-                <div class="arrow a-down"></div>
+            <div class="button" ontouchstart="down(1)" ontouchend="down(0)">
+                <img id="down" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/CentraleBasso%20Verde.png"/>
             </div>
         </div>
         <div class="joypad-col">
-            <div id="up-right" class="button" ontouchstart="diagonal('up-right',1)" ontouchend="diagonal('up-right',0)">
-                <div class="arrow a-up-right"></div>
+            <div class="button" ontouchstart="diagonal('up-right',1)" ontouchend="diagonal('up-right',0)">
+                <img id="up-right" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/AltoDx%20Verde.png"/>
             </div>
-            <div id="right" class="button" ontouchstart="right(1)" ontouchend="right(0)">
-                <div class="arrow a-right"></div>
+            <div class="button" ontouchstart="right(1)" ontouchend="right(0)">
+                <img id="right" class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/CentraleDx%20Verde.png"/>
             </div>
             <div id="down-right" class="button" ontouchstart="diagonal('down-right',1)"
                 ontouchend="diagonal('down-right',0)">
-                <div class="arrow a-down-right"></div>
+                <img class="arrow" src="http://www.cyberpills.net/Falci/MammaMia/BassoDx%20Verde.png"/>
             </div>
         </div>
     </div>
