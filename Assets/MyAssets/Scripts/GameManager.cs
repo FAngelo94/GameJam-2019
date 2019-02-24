@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-//        AirConsole.instance.onConnect += OnConnect;
-//        AirConsole.instance.onDisconnect += OnDisconnect;
     }
 
     void Start()
@@ -80,18 +78,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         //Application.Quit();
     }
-
-    //AirConsole
-    /*
-    void OnConnect(int device_id)
-    {
-        int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
-        if (devNum < 7) AirConsole.instance.SetActivePlayers(devNum);
-    }
-
-    void OnDisconnect(int device_id)
-    {
-        int devNum = AirConsole.instance.GetControllerDeviceIds().Count;
-        if (devNum < 7) AirConsole.instance.SetActivePlayers(devNum);
-    }*/
 }

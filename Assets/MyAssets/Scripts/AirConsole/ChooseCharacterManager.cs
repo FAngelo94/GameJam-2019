@@ -12,8 +12,8 @@ public class ChooseCharacterManager : MonoBehaviour
     public GameObject Graphics;
 
     private int CountConfirm;
-    public void ResetCountConfirm() { CountConfirm = 0; }
     private int[] PlayerChoosen;
+    private bool[] IsPlayerChoosen;
 
     public Sprite connected;
     public Sprite disconnected;
@@ -34,14 +34,32 @@ public class ChooseCharacterManager : MonoBehaviour
         }
         else
             Destroy(this);
-        CountConfirm = 0;
         PlayerChoosen = new int[7];
+        IsPlayerChoosen = new bool[7];
+        ResetCountConfirm();
+        Graphics.SetActive(false);
     }
-
 
     private void Update()
     {
         if(connectionManager) UpdateGUI(connectionManager.GetComponent<ConnectionManager>().playerCount);
+    }
+
+    public void GraphicsIsVisible()
+    {
+        Graphics.SetActive(true);
+    }
+
+    public void ResetCountConfirm()
+    {
+        CountConfirm = 0;
+        for (int i = 0; i < 7; i++)
+            IsPlayerChoosen[i] = false;
+    }
+
+    public bool HasPlayerConfirmed(int player)
+    {
+        return IsPlayerChoosen[player];
     }
 
     public void ConfirmPlayer(int active_player, int index_character)
@@ -49,6 +67,7 @@ public class ChooseCharacterManager : MonoBehaviour
         CountConfirm++;
         int totalPlayer = AirConsole.instance.GetActivePlayerDeviceIds.Count;
         PlayerChoosen[active_player] = index_character;
+        IsPlayerChoosen[active_player] = true;
         if (CountConfirm == totalPlayer)
         {//Start the game
             StartGame();

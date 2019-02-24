@@ -11,6 +11,7 @@ public class ButtonControl : MonoBehaviour
         AirConsole.instance.SetActivePlayers();
         AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
         SceneManager.LoadScene("ChoosePlayer");
+        ChooseCharacterManager.instance.GraphicsIsVisible();
     }
 
     public void GoToOptions()

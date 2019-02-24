@@ -13,6 +13,7 @@ public class ConnectionManager : MonoBehaviour
         playerCount = AirConsole.instance.GetActivePlayerDeviceIds.Count;
         AirConsole.instance.onConnect += OnConnect;
         AirConsole.instance.onDisconnect += OnDisconnect;
+        DontDestroyOnLoad(this);
     }
 
     void OnConnect(int device_id)

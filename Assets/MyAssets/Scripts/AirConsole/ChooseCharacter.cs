@@ -12,7 +12,6 @@ public class ChooseCharacter : MonoBehaviour
     private int MaxCharacter = 7;//numero dei personaggi giocabili
     private int IndexCharacter;
     private int OldIndex;
-    private bool IsConfirmed;
 
     void Awake()
     {
@@ -33,15 +32,14 @@ public class ChooseCharacter : MonoBehaviour
     {
         IndexCharacter = 1;
         OldIndex = IndexCharacter;
-        IsConfirmed = false;
     }
 
     //AirConsole Functions
     void OnMessage(int device_id, JToken data)
     {
         int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber(device_id);
-        Debug.Log("active_player=" + active_player + " - confirmed=" + IsConfirmed);
-        if (active_player == PlayerID && !IsConfirmed)
+        Debug.Log("active_player=" + active_player + " is confirmed");
+        if (active_player == PlayerID && !ChooseCharacterManager.instance.HasPlayerConfirmed(active_player))
         {
             if (data != null &&
                 data["key"] != null &&
@@ -86,6 +84,5 @@ public class ChooseCharacter : MonoBehaviour
     private void ChoosePlayer(int active_player)
     {
         ChooseCharacterManager.instance.ConfirmPlayer(active_player, IndexCharacter - 1);
-        IsConfirmed = true;
     }
 }
