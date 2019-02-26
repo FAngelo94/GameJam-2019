@@ -5,10 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-//airconsole
-//using NDream.AirConsole;
-//using Newtonsoft.Json.Linq;
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -66,7 +62,7 @@ public class GameManager : MonoBehaviour
         Panels.SetActive(false);
         AudioManager.instance.StopMenuMusic();
         AudioManager.instance.PlaySoundOnce(SoundEvent.StartLevel, transform.position);
-        //AudioManager.instance.StartLevelMusic();
+        AudioManager.instance.StartLevelMusic();
         SceneManager.LoadScene("Level1_AirConsoleTest");
     }
 
@@ -76,6 +72,5 @@ public class GameManager : MonoBehaviour
         Panels.SetActive(false);
         AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
         SceneManager.LoadScene("MainMenu");
-        //Application.Quit();
     }
 }

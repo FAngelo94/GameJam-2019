@@ -65,11 +65,7 @@ public class AudioManager : MonoBehaviour
         levelMusicState = FMODUnity.RuntimeManager.CreateInstance(LevelMusicEvent);
         levelMusicState.getParameter("Pizza_Taken", out levelParam);
         levelParam.setValue(0.0f);
-        Attributes.position.x = 0;
-        Attributes.position.y = 0;
-        Attributes.position.z = 0;
-        levelMusicState.set3DAttributes(Attributes);
-
+        
         StartMenuMusic();
     }
 

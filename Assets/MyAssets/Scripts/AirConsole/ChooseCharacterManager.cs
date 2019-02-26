@@ -84,7 +84,7 @@ public class ChooseCharacterManager : MonoBehaviour
         Graphics.SetActive(false);
         AudioManager.instance.StopMenuMusic();
         AudioManager.instance.PlaySoundOnce(SoundEvent.StartLevel, transform.position);
-        //AudioManager.instance.StartLevelMusic();
+        AudioManager.instance.StartLevelMusic();
         SceneManager.LoadScene("Level1_AirConsoleTest");
     }
 

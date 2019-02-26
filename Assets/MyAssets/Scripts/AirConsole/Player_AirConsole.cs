@@ -88,7 +88,6 @@ public class Player_AirConsole : MonoBehaviour
     {
         if (!Stunned && !opponent.GetComponent<Player_AirConsole>().IsStunned() && Pizza != null)
         {
-            //FMODUnity.RuntimeManager.PlayOneShot(StealCollisionEvent, transform.position);
             AudioManager.instance.PlaySoundOnce(SoundEvent.StealPizza, transform.position);
 
             opponent.GetComponent<Player_AirConsole>().AddPizza(Pizza);
@@ -98,7 +97,6 @@ public class Player_AirConsole : MonoBehaviour
         }
         else
         {
-            //FMODUnity.RuntimeManager.PlayOneShot(BumpCollisionEvent, transform.position);
             AudioManager.instance.PlaySoundOnce(SoundEvent.PlayerCollide, transform.position);
         }
     }
@@ -127,18 +125,15 @@ public class Player_AirConsole : MonoBehaviour
         {
             if (CheckVerySlow)
             {
-                //FMODUnity.RuntimeManager.PlayOneShot(WaterStepEvent, transform.position);
                 AudioManager.instance.PlaySoundOnce(SoundEvent.StepWet, transform.position);
             }
             else if (CheckSlow)
             {
-                //FMODUnity.RuntimeManager.PlayOneShot(ClothStepEvent, transform.position);
                 AudioManager.instance.PlaySoundOnce(SoundEvent.StepCloth, transform.position);
             }
             else
             {
-                //FMODUnity.RuntimeManager.PlayOneShot(FootStepEvent, transform.position);
-                //AudioManager.instance.PlaySoundOnce(SoundEvent.Step, transform.position);
+                AudioManager.instance.PlaySoundOnce(SoundEvent.Step, transform.position);
             }
             stepSoundTimer = 0;
         }
@@ -197,7 +192,6 @@ public class Player_AirConsole : MonoBehaviour
         if (collision.tag.Equals("FastObject"))
         {
             CheckFast = true;
-            //FMODUnity.RuntimeManager.PlayOneShot(CarpetEvent, transform.position);
             AudioManager.instance.PlaySoundOnce(SoundEvent.PlayerSlide, transform.position);
         }
 
