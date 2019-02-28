@@ -65,7 +65,6 @@ public class Player_AirConsole : MonoBehaviour
         Stunned = false;
         Fat = transform.Find("Fat").gameObject;
         FatScale = Fat.transform.localScale;
-        StartCoroutine(EatPizza());
 
         moveUp = moveDown = moveLeft = moveRight = false;
     }
@@ -103,6 +102,8 @@ public class Player_AirConsole : MonoBehaviour
 
     private void FixedUpdate()
     {
+        EatPizza(Time.deltaTime);
+
         int XSpeed = 0;
         int YSpeed = 0;
 
@@ -230,27 +231,20 @@ public class Player_AirConsole : MonoBehaviour
         yield return new WaitForSeconds(StunTime);
         Stunned = false;
     }
-    private IEnumerator EatPizza()
+
+    private void EatPizza(float updateTime)
     {
-        while (true)
+        if (Pizza != null)
         {
-            yield return new WaitForSeconds(0.1f);
-            if (Pizza != null)
-            {
-                Pizza.GetComponent<Pizza>().DecrementPizza();
-                PointsFloat += 0.1f;
+            Pizza.GetComponent<Pizza>().DecrementPizza(updateTime);
+            PointsFloat += updateTime;
                 
-                float scale = FatScale.x;
-                scale = scale + PointsFloat / 30;
-                Fat.transform.localScale = new Vector2(scale, scale);
-                IncrementMass();
-                GameManager.instance.UpdatePoints(gameObject.name, PointsFloat);
-            }
+            float scale = FatScale.x;
+            scale = scale + PointsFloat / 30;
+            Fat.transform.localScale = new Vector2(scale, scale);
+            transform.GetComponent<Rigidbody2D>().mass = 1 + PointsFloat;
+            GameManager.instance.UpdatePoints(gameObject.name, PointsFloat);
         }
-    }
-    private void IncrementMass()
-    {
-        transform.GetComponent<Rigidbody2D>().mass = 1 + PointsFloat;
     }
 
     //AirConsole Functions

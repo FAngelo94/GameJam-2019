@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pizza : MonoBehaviour
 {
-    public RectTransform PizzaPanel;
-    public float PercentOfSecond=1;
+    public Image PizzaUI;
+    private float PizzaAmount;
 
     private bool PizzaTaken;
 
     private bool endMusic;
 
     private float Width;
-    private float BoxRemain;
+
 
     [FMODUnity.EventRef]
     public string GrabEvent;
@@ -23,16 +24,19 @@ public class Pizza : MonoBehaviour
         PizzaTaken = false;
         endMusic = true;
         Width = 1;
-        BoxRemain = 100;
+        PizzaAmount = 1.0f;
     }
 
-    public void DecrementPizza()
+    public void DecrementPizza(float decrement)
     {
-        BoxRemain -= 0.1f;
-        //        Debug.Log(PizzaPanel.localScale);
-        PizzaPanel.localScale = new Vector2(1 - Width / 100 * BoxRemain, 1);
+        //decrease pizza
+        PizzaAmount -= decrement/100;
 
-        if (BoxRemain <= 0)
+        //update UI
+        PizzaUI.fillAmount = PizzaAmount;
+        
+        //check end condition
+        if (PizzaAmount <= 0)
         {
             AudioManager.instance.StopLevelMusic();
             GameManager.instance.TheEnd();
