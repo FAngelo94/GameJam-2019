@@ -18,12 +18,18 @@ public class MainMenuCtrl : MonoBehaviour
     void Awake()
     {
         index = 0;//start game index
+        
         AirConsole.instance.onMessage += OnMessage;
+    }
+
+    private void Start()
+    {
+        UpdateUI();
     }
 
     private void Update()
     {
-        UpdateUI();
+        
     }
 
     //AirConsole Functions
@@ -38,20 +44,22 @@ public class MainMenuCtrl : MonoBehaviour
 
             if ((bool)data["pressed"])
             {
-                if (key.Equals("right"))
+               if (key.Equals("right"))
                 {
-                    if (index < 1) index++;
+                    if (index < 0) index++;
                     else index = -1;
+                    UpdateUI();
 
-                    //UpdateUI();
                 }
                 if (key.Equals("left"))
                 {
                     if (index > -1) index--;
-                    else index = 1;
+                    else index = 0;
 
-                    //UpdateUI();
+                    UpdateUI();
                 }
+
+                
 
                 if (key.Equals("confirm"))
                 {
@@ -64,13 +72,13 @@ public class MainMenuCtrl : MonoBehaviour
                         case 0:
                             AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
                             AirConsole.instance.SetActivePlayers();
-                            AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
                             SceneManager.LoadScene("ChoosePlayer");
                             ChooseCharacterManager.instance.GraphicsIsVisible();
+                            ChooseCharacterManager.instance.ResetCountConfirm();
                             break;
-                        case 1:
+                        /*case 1:
                             Application.Quit();
-                            break;
+                            break;*/
                     }
                 }
             }
@@ -87,9 +95,9 @@ public class MainMenuCtrl : MonoBehaviour
             case 0:
                 start.Select();
                 break;
-            case 1:
+            /*case 1:
                 quit.Select();
-                break;
+                break;*/
         }
     }
 

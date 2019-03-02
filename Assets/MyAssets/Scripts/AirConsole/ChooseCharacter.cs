@@ -38,7 +38,7 @@ public class ChooseCharacter : MonoBehaviour
     void OnMessage(int device_id, JToken data)
     {
         int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber(device_id);
-        Debug.Log("active_player=" + active_player + " is confirmed");
+        Debug.Log("active_player=" + active_player + " confirmed="+ !ChooseCharacterManager.instance.HasPlayerConfirmed(active_player));
         if (active_player == PlayerID && !ChooseCharacterManager.instance.HasPlayerConfirmed(active_player))
         {
             if (data != null &&

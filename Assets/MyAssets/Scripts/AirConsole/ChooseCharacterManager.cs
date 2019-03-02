@@ -90,8 +90,6 @@ public class ChooseCharacterManager : MonoBehaviour
 
     void UpdateGUI(int players)
     {
-        Debug.Log(players);
-
         //player message and start button
         string mtext = "";
         bool btnOn = true; 

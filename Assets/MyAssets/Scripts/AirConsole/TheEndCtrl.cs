@@ -61,6 +61,7 @@ public class TheEndCtrl : MonoBehaviour
                             GameManager.instance.Restart();
                             break;
                         case 1:
+                            Debug.Log("Call GAMENAGER");
                             AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
                             GameManager.instance.Quit();
                             break;

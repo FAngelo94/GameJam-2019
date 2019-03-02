@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
+        Debug.Log("QUIT");
         ChooseCharacterManager.instance.ResetCountConfirm();
         Panels.SetActive(false);
         AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);

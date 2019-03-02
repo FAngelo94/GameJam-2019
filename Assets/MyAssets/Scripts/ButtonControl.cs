@@ -12,6 +12,7 @@ public class ButtonControl : MonoBehaviour
         AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
         SceneManager.LoadScene("ChoosePlayer");
         ChooseCharacterManager.instance.GraphicsIsVisible();
+        ChooseCharacterManager.instance.ResetCountConfirm();
     }
 
     public void GoToOptions()
