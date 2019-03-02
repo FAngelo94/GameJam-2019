@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC76DEA6-F815-875B-D1F2-0023ED4EB705}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>WebGL:20</UnityBuildTarget>
+    <UnityVersion>2018.3.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_2;UNITY_2018_3;UNITY_2018;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_WEBGL;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_2;UNITY_2018_3;UNITY_2018;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_WEBGL;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Managed/UnityEngine/UnityEngine">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.AIModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ARModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.AccessibilityModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.AnimationModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.AssetBundleModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.AudioModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.BaselibModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ClothModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.CoreModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.CrashReportingModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.DirectorModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.FileSystemHttpModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.GameCenterModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.GridModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.HotReloadModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.IMGUIModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ImageConversionModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.InputModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.JSONSerializeModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.LocalizationModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.PerformanceReportingModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.PhysicsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.Physics2DModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ProfilerModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.ScreenCaptureModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.SharedInternalsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.SpatialTrackingModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.SpriteMaskModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.SpriteShapeModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.StreamingModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.StyleSheetsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.SubstanceModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TLSModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TerrainModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TextCoreModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TextRenderingModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TilemapModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.TimelineModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UIModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UIElementsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UNETModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UmbraModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityConnectModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityTestProtocolModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityWebRequestModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.VFXModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.VRModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.VehiclesModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.VideoModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGLSupport/Managed/UnityEngine.WebGLModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\PlaybackEngines\WebGLSupport/Managed/UnityEngine.WebGLModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.WindModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEngine/UnityEngine.XRModule">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/UnityEditor">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Managed/Unity.Locator">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\Managed/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets/AirConsole/plugins/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>D:/Matteo/Unity/PizzaAPizze/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>D:/Matteo/Unity/PizzaAPizze/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>D:/Matteo/Unity/PizzaAPizze/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>D:/Matteo/Unity/PizzaAPizze/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>D:/Matteo/Unity/PizzaAPizze/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>D:/Programmi/2018.3.2f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>D:\Programmi\2018.3.2f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="PizzaAPizze.Plugins.csproj">
+      <Project>{9B062A1C-71C5-F2F0-F38E-F88EA26C4F66}</Project>
+      <Name>PizzaAPizze.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
+      <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
+      <Name>Unity.PackageManagerUI.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
+      <Project>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</Project>
+      <Name>Unity.Analytics.DataPrivacy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AirConsole\examples\basic\ExampleBasicLogic.cs" />
+    <Compile Include="Assets\AirConsole\examples\gamestates\GamestateExampleLogic.cs" />
+    <Compile Include="Assets\AirConsole\examples\gyroscope\GyroscopeExampleLogic.cs" />
+    <Compile Include="Assets\AirConsole\examples\platformer\PlatformerExampleLogic.cs" />
+    <Compile Include="Assets\AirConsole\examples\platformer\Player_Platformer.cs" />
+    <Compile Include="Assets\AirConsole\examples\pong\ExamplePongLogic.cs" />
+    <Compile Include="Assets\AirConsole\examples\pong\scripts\Racket.cs" />
+    <Compile Include="Assets\AirConsole\examples\swipe\Player_Swipe.cs" />
+    <Compile Include="Assets\AirConsole\extras\HighScoreHelper.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonBinaryType.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonObjectId.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonToken.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonType.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Bson\BsonWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\ConstructorHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\BinaryConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\CustomCreationConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\DataSetConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\DataTableConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\JsonDateTimeSerializationMode.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\RegexConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\StringEnumConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Converters\XmlNodeConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\DefaultValueHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\FormatterAssemblyStyle.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\IJsonLineInfo.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonArrayAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonConstructorAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonContainerAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonConvert.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonConverterAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonConverterCollection.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonObjectAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonPropertyAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonReaderException.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonSerializationException.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonSerializer.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonSerializerSettings.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonTextReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonTextWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonToken.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonValidatingReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\JsonWriterException.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\Extensions.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\IJEnumerable.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JArray.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JConstructor.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JContainer.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JEnumerable.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JObject.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JPath.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JProperty.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JRaw.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JToken.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JTokenReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JTokenType.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JTokenWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Linq\JValue.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\MemberSerialization.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\MissingMemberHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\NullValueHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\ObjectCreationHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\PreserveReferencesHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\ReferenceLoopHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Required.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\Extensions.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchema.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaException.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaModel.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaNode.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaType.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\ValidationEventArgs.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Schema\ValidationEventHandler.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\ErrorContext.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\IContractResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\IReferenceResolver.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\IValueProvider.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonArrayContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonLinqContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonObjectContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonProperty.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonStringContract.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\LateBoundMetadataTypeAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\ObjectConstructor.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\SerializationBinder.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\StreamingContext.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\TypeNameHandling.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\Base64Encoder.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\CollectionWrapper.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ConvertUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DateTimeUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DynamicProxy.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DynamicUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\DynamicWrapper.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\EnumUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\EnumValue.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\EnumValues.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\LinqBridge.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ListWrapper.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\MathUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\MethodCall.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\StringBuffer.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\StringUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="Assets\AirConsole\plugins\Newtonsoft.Json\Utilities\ValidationUtils.cs" />
+    <Compile Include="Assets\AirConsole\plugins\WebViewObject.cs" />
+    <Compile Include="Assets\AirConsole\scripts\AirConsole.cs" />
+    <Compile Include="Assets\AirConsole\scripts\DebugLevel.cs" />
+    <Compile Include="Assets\AirConsole\scripts\Settings.cs" />
+    <Compile Include="Assets\AirConsole\scripts\WebsocketListener.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\Bone2D.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\Control.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\EditorUpdaterProxy.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\Ik2D.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkCCD2D.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkGroup.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkLimb2D.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkSolver2D.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkSolver2DCCD.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\IkSolver2DLimb.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\MathUtils.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\Pose.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\PoseManager.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\SpriteMesh.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
+    <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\AirConsoleController.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\ButtonControl.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Characters.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Fat.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Pizza.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Player.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Player_AirConsole.cs" />
+    <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+    <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AirConsole\README.txt" />
+    <None Include="Assets\Anima2D\Licenses.txt" />
+    <None Include="Assets\Anima2D\Readme.txt" />
+    <None Include="Assets\Anima2D\Version.txt" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
+    <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
+    <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
+    <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageAddFromUrlField.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageDetails.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageGroup.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageItem.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageList.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerToolbar.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerWindow.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchToolbar.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageStatusBar.uxml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
