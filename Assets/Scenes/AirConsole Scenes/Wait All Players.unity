@@ -241,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 6870435166378329423, guid: 5984976e01f1ca2489338ae3bbe0f0b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6870435166378329423, guid: 5984976e01f1ca2489338ae3bbe0f0b3,
         type: 3}
@@ -308,6 +308,7 @@ MonoBehaviour:
   MenuMusicEvent: event:/Music_Menu
   MenuAmbienceEvent: event:/Menu_Ambience
   LevelMusicEvent: event:/Music_Play
+  isAudioReady: 0
 --- !u!4 &568785306
 Transform:
   m_ObjectHideFlags: 0
@@ -740,7 +741,7 @@ PrefabInstance:
     - target: {fileID: 1858870542895654186, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1858870542895654186, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}

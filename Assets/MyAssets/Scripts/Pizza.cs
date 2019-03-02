@@ -10,11 +10,6 @@ public class Pizza : MonoBehaviour
 
     private bool PizzaTaken;
 
-    private bool endMusic;
-
-    private float Width;
-
-
     [FMODUnity.EventRef]
     public string GrabEvent;
 
@@ -22,8 +17,6 @@ public class Pizza : MonoBehaviour
     void Start()
     {
         PizzaTaken = false;
-        endMusic = true;
-        Width = 1;
         PizzaAmount = 1.0f;
     }
 

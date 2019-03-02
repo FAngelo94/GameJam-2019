@@ -59,6 +59,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
+  - Master Bank
   Banks:
   - SFX
+  - AMB
   - Music
+  - Master Bank

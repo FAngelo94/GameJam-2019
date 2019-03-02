@@ -45,6 +45,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    public bool isAudioReady;
+
     void Awake()
     {
         if (instance != null && instance != this) {
@@ -58,6 +60,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        /*
         //init menu music and ambience
         menuMusicState = FMODUnity.RuntimeManager.CreateInstance(MenuMusicEvent);
         menuAmbienceState = FMODUnity.RuntimeManager.CreateInstance(MenuAmbienceEvent);
@@ -66,7 +69,12 @@ public class AudioManager : MonoBehaviour
         levelMusicState.getParameter("Pizza_Taken", out levelParam);
         levelParam.setValue(0.0f);
         
-        StartMenuMusic();
+        StartMenuMusic(); */
+    }
+
+    public void Update()
+    {
+        if (!isAudioReady) CheckReady();
     }
 
     private void OnDestroy()
@@ -143,6 +151,34 @@ public class AudioManager : MonoBehaviour
                 FMODUnity.RuntimeManager.PlayOneShot(StepClothEvent, position);
                 break;
         }
+    }
+
+    private void CheckReady()
+    {
+        if (!isAudioReady &&
+            FMODUnity.RuntimeManager.HasBankLoaded("AMB") &&
+            FMODUnity.RuntimeManager.HasBankLoaded("Master Bank") &&
+            FMODUnity.RuntimeManager.HasBankLoaded("Music") &&
+            FMODUnity.RuntimeManager.HasBankLoaded("SFX")
+            )
+        {
+            //init menu music and ambience
+            menuMusicState = FMODUnity.RuntimeManager.CreateInstance(MenuMusicEvent);
+            menuAmbienceState = FMODUnity.RuntimeManager.CreateInstance(MenuAmbienceEvent);
+            //init level music and parameter
+            levelMusicState = FMODUnity.RuntimeManager.CreateInstance(LevelMusicEvent);
+            levelMusicState.getParameter("Pizza_Taken", out levelParam);
+            levelParam.setValue(0.0f);
+
+            //StartMenuMusic();
+
+            isAudioReady = true;
+        }
+    }
+
+    public bool IsReady()
+    {
+        return isAudioReady;
     }
 }
 

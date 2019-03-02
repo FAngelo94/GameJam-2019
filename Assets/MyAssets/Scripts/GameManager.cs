@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
         instance = this;
         for (int i = 0; i < 7; i++)
             Points.Add("Player " + (i + 1), "0");

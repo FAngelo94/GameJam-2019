@@ -9,6 +9,6 @@ public class AirConsoleManager : MonoBehaviour
 {
     private void Start()
     {
-        SceneManager.LoadScene("MainMenu");
+//        SceneManager.LoadScene("MainMenu");
     }
 }
