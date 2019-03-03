@@ -823,23 +823,33 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7183827187879884484, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760375002035394139, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2513790067931857013, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 087f6b4f3ed17ce4aa8c87bae4b9b610,
+      objectReference: {fileID: 21300000, guid: c0429b30ecf67924ab56f979a9809df0,
         type: 3}
     - target: {fileID: 5927053732845861645, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 282f5a81bba32ec498f12b54a51bf38a,
+      objectReference: {fileID: 21300000, guid: 45abab418f7fa694b9371f17eb4e49a3,
         type: 3}
     - target: {fileID: 5927053732845861645, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 282f5a81bba32ec498f12b54a51bf38a,
+      objectReference: {fileID: 21300000, guid: 45abab418f7fa694b9371f17eb4e49a3,
         type: 3}
     - target: {fileID: 6793052336854718491, guid: 778a91e9131ae8348b2122948bf28a47,
         type: 3}
@@ -859,6 +869,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8ae70613404611c45a51d9e31b378298,
         type: 3}
+    - target: {fileID: 2070224364953161159, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629618304365210879, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479355181406071638, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939541377529499194, guid: 778a91e9131ae8348b2122948bf28a47,
+        type: 3}
+      propertyPath: m_Text
+      value: Player 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 778a91e9131ae8348b2122948bf28a47, type: 3}
 --- !u!1 &1829389982 stripped
