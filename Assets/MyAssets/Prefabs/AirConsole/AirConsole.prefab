@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3771446021799173707}
   - component: {fileID: 3771446021799173704}
+  - component: {fileID: 1829389983}
   m_Layer: 0
   m_Name: AirConsole
   m_TagString: Untagged
@@ -43,6 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37d83ebce05ad74683fd3228dde9e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  browserStartMode: 4
+  browserStartMode: 3
   controllerHtml: {fileID: 4900000, guid: 6e1a95638d83ccc46af3869c7389ab54, type: 3}
   autoScaleCanvas: 1
+--- !u!114 &1829389983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771446021799173705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092bc949f8f03eb43a3413161d8adc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

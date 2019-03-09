@@ -1,54 +1,294 @@
-﻿<!DOCTYPE HTML>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta content='width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0' name='viewport'>
-  <title>AirConsole Controller</title>
-  <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
-  <!-- AirConsole-Controls -->
-  <link rel="stylesheet" type="text/css" href="airconsole-controls/button/button.css">
-  <link rel="stylesheet" type="text/css" href="airconsole-controls/dpad/dpad.css">
-  <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="controller/styles/styles.css">
-  <link rel="stylesheet" type="text/css" href="controller/styles/controls.css">
-</head>
-<body>
 
-    <div id="controller-container">
-        <!-- REPLACE_HERE START -->
-        <div id="view-0" class="view" style="display: flex;">
-            <div id="view-0-section-0" class="section " style="height: 100%;">
-                <div id="dpad" class="dpad-absolute-container">
-                    <div class="dpad-absolute" style="position: static;">
-                        <div class="dpad-arrow dpad-arrow-up"></div>
-                        <div class="dpad-arrow dpad-arrow-down"></div>
-                        <div class="dpad-arrow dpad-arrow-left"></div>
-                        <div class="dpad-arrow dpad-arrow-right"></div>
-                    </div>
-                </div>
+<head>
+    <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
+    <script type="text/javascript">
+        var airconsole;
+        /**
+         * Sets up the communication to the screen.
+         */
+        function init() {
+            airconsole = new AirConsole({ orientation: "landscape" });
+
+            airconsole.onActivePlayersChange = function (player_number) {
+                updateText(player_number);
+            };
+            airconsole.onReady = function () {
+                updateText();
+            };
+        }
+        function updateText(player_number) {
+            var message = "";
+            if (player_number == 0) {
+                message = "You are the player 0";
+            } else if (player_number == 1) {
+                message = "You are the player 1";
+            } else if (player_number == 2) {
+                message = "You are the player 2";
+            } else if (player_number == 3) {
+                message = "You are the player 3";
+            } else if (player_number == 4) {
+                message = "You are the player 4";
+            } else if (player_number == 5) {
+                message = "You are the player 5";
+            } else if (player_number == 6) {
+                message = "You are the player 6";
+            }
+            //alert(message);
+        }
+        function diagonal(direction, amount) {
+
+            if (direction === "up-left") {
+                if (amount === 1) {
+                    document.getElementById("up-left-v").classList.add("is-none");
+                    document.getElementById("up-left-r").classList.remove("is-none");
+                }
+                else {
+                    document.getElementById("up-left-r").classList.add("is-none");
+                    document.getElementById("up-left-v").classList.remove("is-none");
+                }
+                up(amount);
+                left(amount);
+
+            }
+            if (direction === "up-right") {
+                if (amount === 1) {
+                    document.getElementById("up-right-v").classList.add("is-none");
+                    document.getElementById("up-right-r").classList.remove("is-none");
+                }
+                else {
+                    document.getElementById("up-right-r").classList.add("is-none");
+                    document.getElementById("up-right-v").classList.remove("is-none");
+                }
+                up(amount);
+                right(amount);
+
+            }
+            if (direction === "down-left") {
+                if (amount === 1) {
+                    document.getElementById("down-left-v").classList.add("is-none");
+                    document.getElementById("down-left-r").classList.remove("is-none");
+                }
+                else {
+                    document.getElementById("down-left-r").classList.add("is-none");
+                    document.getElementById("down-left-v").classList.remove("is-none");
+                }
+                down(amount);
+                left(amount);
+            }
+            if (direction === "down-right") {
+                if (amount === 1) {
+                    document.getElementById("down-right-v").classList.add("is-none");
+                    document.getElementById("down-right-r").classList.remove("is-none");
+                }
+                else {
+                    document.getElementById("down-right-r").classList.add("is-none");
+                    document.getElementById("down-right-v").classList.remove("is-none");
+                }
+                down(amount);
+                right(amount);
+            }
+        }
+
+
+        function up(amount) {
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: true });
+                document.getElementById("up-v").classList.add("is-none");
+                document.getElementById("up-r").classList.remove("is-none");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
+                document.getElementById("up-r").classList.add("is-none");
+                document.getElementById("up-v").classList.remove("is-none");
+            }
+        }
+        function down(amount) {
+            var element = document.getElementById("down");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: true });
+                document.getElementById("down-v").classList.add("is-none");
+                document.getElementById("down-r").classList.remove("is-none");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "down",
+                    pressed: false
+                });
+                document.getElementById("down-r").classList.add("is-none");
+                document.getElementById("down-v").classList.remove("is-none");
+            }
+        }
+        function right(amount) {
+            var element = document.getElementById("right");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "right",
+                    pressed: true
+                });
+                document.getElementById("right-v").classList.add("is-none");
+                document.getElementById("right-r").classList.remove("is-none");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "right",
+                    pressed: false
+                });
+                document.getElementById("right-r").classList.add("is-none");
+                document.getElementById("right-v").classList.remove("is-none");
+            }
+        }
+        function left(amount) {
+            var element = document.getElementById("left");
+            if (amount === 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: true });
+                document.getElementById("left-v").classList.add("is-none");
+                document.getElementById("left-r").classList.remove("is-none");
+            }
+            else {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "left",
+                    pressed: false
+                });
+                document.getElementById("left-r").classList.add("is-none");
+                document.getElementById("left-v").classList.remove("is-none");
+            }
+        }
+        function confirm(amount) {
+            var element = document.getElementById("confirm");
+            if (amount == 1) {
+                document.getElementById("confirm-v").classList.add("is-none");
+                document.getElementById("confirm-r").classList.remove("is-none");
+            }
+            if (amount === 0) {
+                airconsole.message(AirConsole.SCREEN, {
+                    key: "confirm",
+                    pressed: true
+                });
+                document.getElementById("confirm-r").classList.add("is-none");
+                document.getElementById("confirm-v").classList.remove("is-none");
+            }
+        }
+    </script>
+    <style type="text/css">
+        @font-face {
+            font-family: "Arial";
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .joypad {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .joypad-col {
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex: 25%;
+            height: 100%;
+        }
+
+        .joypad-col.center {
+            flex: 50%;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 33.4%;
+            width: 100%;
+            border: red solid 1px;
+            background-color: white;
+        }
+
+        .is-hidden {
+            visibility: hidden;
+        }
+
+        .is-none {
+            display: none;
+        }
+
+        .arrow {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <div class="joypad">
+        <div class="joypad-col">
+            <div class="button" ontouchstart="diagonal('up-left',1)" ontouchmove="diagonal('up-left',1)" ontouchend="diagonal('up-left',0)">
+                <img id="up-left-v" class="arrow" src="AltoSxVerde.png" />
+                <img id="up-left-r" class="arrow is-none"
+                    src="AltoSxRosso.png" />
+            </div>
+            <div class="button" ontouchstart="left(1)" ontouchmove="left(1)" ontouchend="left(0)">
+                <img id="left-v" class="arrow" src="CentraleSxVerde.png" />
+                <img id="left-r" class="arrow is-none"
+                    src="CentraleSxRosso.png" />
+            </div>
+            <div class="button" ontouchstart="diagonal('down-left',1)" ontouchmove="diagonal('down-left',1)" ontouchend="diagonal('down-left',0)">
+                <img id="down-left-v" class="arrow"
+                    src="BassoSxVerde.png" />
+                <img id="down-left-r" class="arrow is-none"
+                    src="BassoSxRosso.png" />
             </div>
         </div>
-
-
-        <script type="text/javascript">
-            var ctrl_data = '{"orientation":"landscape","selected_view_id":"view-0","views":[{"id":"view-0","sections":[{"id":"view-0-section-0","elements":[{"id":"dpad","key":"dpad_absolute","name":"DPad Absolute","tmpl":"dpad","constructor_fn":"DPadAbsoluteElement","options":{"constructor_args":{"diagonal":true},"attr_id":"view-0-section-0-element-0","css_classes":"","view_action":{"target":null,"view_id":null}}}],"classes":[]}]}]}';
-        </script>
-        <!-- REPLACE_HERE END -->
+        <div class="joypad-col center">
+            <div class="button up" ontouchstart="up(1)" ontouchmove="up(1)" ontouchend="up(0)">
+                <img id="up-v" class="arrow" src="CentraleAltoVerde.png" />
+                <img id="up-r" class="arrow is-none"
+                    src="CentraleAltoRosso.png" />
+            </div>
+            <div class="button" ontouchstart="confirm(1)" ontouchmove="confirm(1)" ontouchend="confirm(0)">
+                <img id="confirm-v" class="arrow" src="CentraleVerde.png" />
+                <img id="confirm-r" class="arrow is-none"
+                    src="CentraleRosso.png" />
+            </div>
+            <div class="button" ontouchstart="down(1)" ontouchmove="down(1)" ontouchend="down(0)">
+                <img id="down-v" class="arrow"
+                    src="CentraleBassoVerde.png" />
+                <img id="down-r" class="arrow is-none"
+                    src="CentraleBassoRosso.png" />
+            </div>
+        </div>
+        <div class="joypad-col">
+            <div class="button" ontouchstart="diagonal('up-right',1)" ontouchmove="diagonal('up-right',1)" ontouchend="diagonal('up-right',0)">
+                <img id="up-right-v" class="arrow" src="AltoDxVerde.png" />
+                <img id="up-right-r" class="arrow is-none"
+                    src="AltoDxRosso.png" />
+            </div>
+            <div class="button" ontouchstart="right(1)" ontouchmove="right(1)" ontouchend="right(0)">
+                <img id="right-v" class="arrow" src="CentraleDxVerde.png" />
+                <img id="right-r" class="arrow is-none"
+                    src="CentraleDxRosso.png" />
+            </div>
+            <div class="button" ontouchstart="diagonal('down-right',1)" ontouchmove="diagonal('down-right',1)" ontouchend="diagonal('down-right',0)">
+                <img id="down-right-v" class="arrow"
+                    src="BassoDxVerde.png" />
+                <img id="down-right-r" class="arrow is-none"
+                    src="BassoDxRosso.png" />
+            </div>
+        </div>
     </div>
-
-  <!-- 3rd Party Libs -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="controller/libs/handlebars-v4.0.5.js"></script>
-  <!-- AIRCONSOLE -->
-  <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-latest.js"></script>
-  <script type="text/javascript" src="controller/libs/airconsole_view_manager.js"></script>
-  <!-- AIRCONSOLE CONTROLS -->
-  <script type="text/javascript" src="airconsole-controls/button/button.js"></script>
-  <script type="text/javascript" src="airconsole-controls/dpad/dpad.js"></script>
-  <script type="text/javascript" src="airconsole-controls/swipe-analog/swipe-analog.js"></script>
-  <script type="text/javascript" src="airconsole-controls/swipe-digital/swipe-digital.js"></script>
-  <!-- GENERATOR -->
-  <script type="text/javascript" src="controller/js/controller_generator.js"></script>
-  <script type="text/javascript" src="controller/js/main.js"></script>
 </body>
+
 </html>
