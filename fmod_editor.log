@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000043589D78 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000005C1C1C18 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -24,3 +24,827 @@
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = FMod/AMB.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606778 : node = 00000000547F4E60
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606778
+[LOG] SystemI::createSound                     : filename = FMod/AMB.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/AMB.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000044606AD8 : node = 00000000547F64B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1356928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2496
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F4F78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='19 Kitchen-Dish & Silverware Movement', format=2, channels=2, frequency=48000, lengthbytes=725024, lengthpcm=3073920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.476959.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606778
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606AD8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/AMB.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1356928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2496
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F65C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='33 Restaurant-Italian Restaurant,Kitchen Walla', format=2, channels=2, frequency=48000, lengthbytes=630656, lengthpcm=3072000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.350739.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606AD8
+[LOG] SoundI::getSubSound                      : sound 0000000044606778.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000044606AD8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044607198 : node = 00000000547F4FB0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044607198
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044605F08 : node = 00000000547F5100
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSound                     :     filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000446065C8 : node = 00000000547F5F70
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F50C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Base', format=2, channels=2, frequency=48000, lengthbytes=176416, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.337513.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044607198
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044605F08
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5218
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Trombetta', format=2, channels=1, frequency=48000, lengthbytes=100512, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.327128.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044605F08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446065C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6088
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Pizzicato', format=2, channels=1, frequency=48000, lengthbytes=91104, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.402839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446065C8
+[LOG] SoundI::getSubSound                      : sound 0000000044607198.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000044605F08.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 00000000446065C8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74B28 : node = 00000000547F5B80
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74B28
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74CD8 : node = 00000000547F5E20
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5C98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Base', format=2, channels=2, frequency=48000, lengthbytes=176416, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.337513.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74B28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74CD8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5F38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Pizzicato', format=2, channels=1, frequency=48000, lengthbytes=91104, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.402839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74CD8
+[LOG] SoundI::getSubSound                      : sound 000000001DE74B28.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000001DE74CD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : M1_Base (0000000044607198)
+[LOG] SoundI::release                          :     M1_Base (000000004C9A0C98)
+[LOG] SoundI::release                          :     M1_Base (0000000044606418)
+[LOG] SoundI::release                          : M1_Trombetta (0000000044605F08)
+[LOG] SoundI::release                          :     M1_Trombetta (000000004C99E0B8)
+[LOG] SoundI::release                          :     M1_Trombetta (000000001DE73388)
+[LOG] SoundI::release                          : M1_Pizzicato (00000000446065C8)
+[LOG] SoundI::release                          :     M1_Pizzicato (000000004C99FF98)
+[LOG] SoundI::release                          :     M1_Pizzicato (000000001DE742B8)
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044607198 : node = 00000000547F53A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044607198
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F54B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Pizzicato', format=2, channels=1, frequency=48000, lengthbytes=91104, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.402839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044607198
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606418 : node = 00000000547F4FB0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SoundI::getSubSound                      : sound 0000000044607198.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606418
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F50C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Base', format=2, channels=2, frequency=48000, lengthbytes=176416, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.337513.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606418
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE742B8 : node = 00000000547F6210
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SoundI::getSubSound                      : sound 0000000044606418.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE742B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6328
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Trombetta', format=2, channels=1, frequency=48000, lengthbytes=100512, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.327128.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE742B8
+[LOG] SoundI::getSubSound                      : sound 000000001DE742B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : M1_Base (000000001DE74B28)
+[LOG] SoundI::release                          :     M1_Base (000000004C99E598)
+[LOG] SoundI::release                          :     M1_Base (000000005CA50288)
+[LOG] SoundI::release                          : M1_Pizzicato (000000001DE74CD8)
+[LOG] SoundI::release                          :     M1_Pizzicato (000000004C9A4968)
+[LOG] SoundI::release                          :     M1_Pizzicato (000000005CA51368)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007FF6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA491C1100
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA491C10D0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA491C11D0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA491C1290
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000042EF1588
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX_No', format=2, channels=2, frequency=48000, lengthbytes=19008, lengthpcm=72698, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.489904.
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74B28 : node = 00000000547F5E20
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74B28
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74CD8 : node = 00000000547F6360
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5F38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000007FF6F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759', format=2, channels=2, frequency=48000, lengthbytes=1020384, lengthpcm=3899825, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.010443.
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFA491C1100
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFA491C10D0
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFA491C11D0
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFA491C1290
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 00000000418E1918
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='SFX_Ok', format=2, channels=2, frequency=48000, lengthbytes=19328, lengthpcm=73327, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.746474.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74B28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74CD8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6478
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='M1_Base', format=2, channels=2, frequency=48000, lengthbytes=176416, lengthpcm=576000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.337513.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74CD8
+[LOG] SoundI::getSubSound                      : sound 000000001DE74B28.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000001DE74CD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 33 Restaurant-Italian Restaurant,Kitchen Walla (0000000044606AD8)
+[LOG] SoundI::release                          :     33 Restaurant-Italian Restaurant,Kitchen Walla (0000000041DBA5C8)
+[LOG] SoundI::release                          :     33 Restaurant-Italian Restaurant,Kitchen Walla (0000000044606C88)
+[LOG] SoundI::release                          : 19 Kitchen-Dish & Silverware Movement (0000000044606778)
+[LOG] SoundI::release                          :     19 Kitchen-Dish & Silverware Movement (0000000041DBA768)
+[LOG] SoundI::release                          :     19 Kitchen-Dish & Silverware Movement (00000000446076A8)
+[LOG] SoundI::release                          : M1_Trombetta (000000001DE742B8)
+[LOG] SoundI::release                          :     M1_Trombetta (000000004CC7C438)
+[LOG] SoundI::release                          :     M1_Trombetta (000000001DE73388)
+[LOG] SoundI::release                          : M1_Base (0000000044606418)
+[LOG] SoundI::release                          :     M1_Base (000000004CC7C298)
+[LOG] SoundI::release                          :     M1_Base (00000000446065C8)
+[LOG] SoundI::release                          : M1_Pizzicato (0000000044607198)
+[LOG] SoundI::release                          :     M1_Pizzicato (000000004CC7BDB8)
+[LOG] SoundI::release                          :     M1_Pizzicato (0000000044605F08)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044605F08 : node = 00000000547F5F70
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044605F08
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6088
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044605F08
+[LOG] SoundI::getSubSound                      : sound 0000000044605F08.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044607198 : node = 00000000547F6C90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044607198
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6DA8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044607198
+[LOG] SoundI::getSubSound                      : sound 0000000044607198.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBA5C8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606C88 : node = 00000000547F4E60
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606C88
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F4F78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606C88
+[LOG] SoundI::getSubSound                      : sound 0000000044606C88.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044607198)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E7618)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606418)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606778 : node = 00000000547F4FB0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606778
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F50C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606778
+[LOG] SoundI::getSubSound                      : sound 0000000044606778.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606AD8 : node = 00000000547F6750
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606AD8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6868
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606AD8
+[LOG] SoundI::getSubSound                      : sound 0000000044606AD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606C88)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E5258)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606C88 : node = 00000000547F5100
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606C88
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5218
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606C88
+[LOG] SoundI::getSubSound                      : sound 0000000044606C88.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606778)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E53F8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000446065C8 : node = 00000000547F58E0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446065C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F59F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446065C8
+[LOG] SoundI::getSubSound                      : sound 00000000446065C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606AD8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E7618)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044607198)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606418 : node = 00000000547F6600
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606418
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6718
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606418
+[LOG] SoundI::getSubSound                      : sound 0000000044606418.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606C88)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E5258)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007FF6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA491C1100
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA491C10D0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA491C11D0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA491C1290
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000059E73188
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='ZOOM0058-Gain_13', format=2, channels=2, frequency=48000, lengthbytes=1088, lengthpcm=2848, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.054561.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007FF6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA491C1100
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA491C10D0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA491C11D0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA491C1290
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000059E73188
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='ZOOM0058-Gain_16', format=2, channels=2, frequency=48000, lengthbytes=5120, lengthpcm=199520, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.162055.
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446065C8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E53F8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606418)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000410E7618)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606778)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044605F08 : node = 00000000547F5640
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044605F08
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5758
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044605F08
+[LOG] SoundI::getSubSound                      : sound 0000000044605F08.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606418 : node = 00000000547F5B80
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606418
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5C98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606418
+[LOG] SoundI::getSubSound                      : sound 0000000044606418.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000446065C8 : node = 00000000547F5F70
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446065C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6088
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446065C8
+[LOG] SoundI::getSubSound                      : sound 00000000446065C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBADE8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044607198)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606778 : node = 00000000547F6600
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606778
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6718
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606778
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606418)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBA768)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SoundI::getSubSound                      : sound 0000000044606778.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044607198 : node = 00000000547F60C0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044607198
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446065C8)
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :         exinfo->length             = 571328
+[LOG] SoundI::release                          :         27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBAAA8)
+[LOG] SystemI::createSoundInternal             :         exinfo->fileoffset         = 20768
+[LOG] SoundI::release                          :         27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606C88)
+[LOG] SystemI::createSoundInternal             :         exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F61D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044607198
+[LOG] SoundI::getSubSound                      : sound 0000000044607198.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000446076A8 : node = 00000000547F6750
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446076A8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6868
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446076A8
+[LOG] SoundI::getSubSound                      : sound 00000000446076A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606778)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBADE8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606AD8)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044605F08 : node = 00000000547F53A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044605F08
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F54B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044605F08
+[LOG] SoundI::getSubSound                      : sound 0000000044605F08.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044607198)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBA768)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446065C8)
+[LOG] SystemI::createSound                     : filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000446065C8 : node = 00000000547F64B0
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 20768
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446065C8
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = FMod/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000007FF6F5FC
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000044606778 : node = 00000000547F6C90
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFA491C1100
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFA491C10D0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFA491C11D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F65C8
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFA491C1290
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0000000059E73188
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 12000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='GnamSTART_01', format=2, channels=2, frequency=48000, lengthbytes=20288, lengthpcm=142620, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.219594.
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759', format=2, channels=2, frequency=48000, lengthbytes=1020384, lengthpcm=3899825, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.010443.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446065C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606778
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2857536
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7648
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6DA8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MM_Music_Main', format=2, channels=2, frequency=48000, lengthbytes=1467008, lengthpcm=4864000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.337701.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606778
+[LOG] SoundI::getSubSound                      : sound 00000000446065C8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000044606778.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBAAA8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606C88)
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000041DBADE8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606418)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE73388 : node = 00000000547F6600
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE73388
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6718
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE73388
+[LOG] SoundI::getSubSound                      : sound 000000001DE73388.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (000000001DE74B28)
+[LOG] SoundI::release                          :     404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (000000004C99E0B8)
+[LOG] SoundI::release                          :     404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (000000005CA51368)
+[LOG] SoundI::release                          : M1_Base (000000001DE74CD8)
+[LOG] SoundI::release                          :     M1_Base (000000004C99FF98)
+[LOG] SoundI::release                          :     M1_Base (000000005CA51518)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74B28 : node = 00000000547F6750
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74B28
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6868
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74B28
+[LOG] SoundI::getSubSound                      : sound 000000001DE74B28.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000044606418 : node = 00000000547F5F70
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000044606418
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6088
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000044606418
+[LOG] SoundI::getSubSound                      : sound 0000000044606418.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE73388)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000005C488298)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE742B8)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000446076A8 : node = 00000000547F5640
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000446076A8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5758
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000446076A8
+[LOG] SoundI::getSubSound                      : sound 00000000446076A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE74B28)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DF1B9D8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE74CD8)
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606418)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DF1BD18)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044606C88)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE742B8 : node = 00000000547F5B80
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE742B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F5C98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE742B8
+[LOG] SoundI::getSubSound                      : sound 000000001DE742B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (00000000446076A8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DF1A7F8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (0000000044605F08)
+[LOG] SystemI::createSound                     : filename = FMod/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DE74B28 : node = 00000000547F6750
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041DBA578.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DE74B28
+[LOG] SystemI::createSoundInternal             :     Create name='FMod/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 571328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20768
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000547F6868
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door', format=2, channels=2, frequency=48000, lengthbytes=347360, lengthpcm=1297280, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848541.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DE74B28
+[LOG] SoundI::getSubSound                      : sound 000000001DE74B28.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE742B8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DF1B9D8)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE73388)
+[LOG] SoundI::release                          : 27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE74B28)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DF1BD18)
+[LOG] SoundI::release                          :     27. Footsteps, Pavement, One Person Walking, Pavement, Steps, Open, Close Door (000000001DE74CD8)
+[LOG] SoundI::release                          : MM_Music_Main (0000000044606778)
+[LOG] SoundI::release                          :     MM_Music_Main (000000005C4880F8)
+[LOG] SoundI::release                          :     MM_Music_Main (0000000044607198)
+[LOG] SoundI::release                          : 404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (00000000446065C8)
+[LOG] SoundI::release                          :     404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (000000005C486A38)
+[LOG] SoundI::release                          :     404826__klankbeeld__room-tone-hallway-small-house-calm-environment-short-150903-0759 (0000000044606AD8)
+[LOG] SoundI::release                          :  (0000000054080618)
+[LOG] SoundI::release                          :     SFX_No (000000004C9A0C98)
+[LOG] SoundI::release                          :  (0000000054080058)
+[LOG] SoundI::release                          :     SFX_Ok (000000004C99E598)
+[LOG] SoundI::release                          :  (00000000540804A8)
+[LOG] SoundI::release                          :     ZOOM0058-Gain_13 (00000000410E5258)
+[LOG] SoundI::release                          :  (0000000045782D38)
+[LOG] SoundI::release                          :     ZOOM0058-Gain_16 (0000000041DBA5C8)
+[LOG] SoundI::release                          :  (0000000045782048)
+[LOG] SoundI::release                          :     GnamSTART_01 (0000000041DBA768)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
