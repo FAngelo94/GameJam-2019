@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 516162050}
   - component: {fileID: 516162049}
   m_Layer: 0
-  m_Name: TheEndCtrl
+  m_Name: TheEndController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,9 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a4d697576320b41b21369d08318a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  credits: {fileID: 0}
-  quit: {fileID: 0}
+  index: 0
+  RestartButton: {fileID: 0}
+  MainMenu: {fileID: 0}
 --- !u!4 &516162050
 Transform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 1173092461}
   - component: {fileID: 1173092463}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: TheEndCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1173092463
 MonoBehaviour:
@@ -309,5 +309,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -6,7 +6,7 @@ using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
 using UnityEngine.UI;
 
-public class TheEndController : MonoBehaviour
+public class TheEndCtrl : MonoBehaviour
 {
     //button index
     private int index;
