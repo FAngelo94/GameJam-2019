@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CreditsController : MonoBehaviour
 {
-    public Button back;
+    public Button BackButton;
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class CreditsController : MonoBehaviour
 
     private void Start()
     {
-        UpdateUI();
+        BackButton.Select();
     }
 
     //AirConsole Functions
@@ -39,11 +39,6 @@ public class CreditsController : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void UpdateUI()
-    {
-        back.Select();
     }
 
     void OnDestroy()
