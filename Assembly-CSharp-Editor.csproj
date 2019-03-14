@@ -68,6 +68,7 @@
     <Compile Include="Assets\AirConsole\scripts\editor\SettingWindow.cs" />
     <Compile Include="Assets\AirConsole\scripts\editor\WebListener.cs" />
     <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
+    <Compile Include="Assets\Editor\HelperBoxes.cs" />
     <Compile Include="Assets\GoogleVR\Editor\FmodGvrAudioRoomEditor.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\FmodResonanceAudioRoomEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
