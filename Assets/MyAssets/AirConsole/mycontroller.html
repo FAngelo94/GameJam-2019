@@ -28,11 +28,10 @@
                 updateText(player_number);
             };
             airconsole.onReady = function () {
-                vm = new AirConsoleViewManager(airconsole);
+                
 
             };
 
-            changeController();
             body = document.querySelector("body");
             container = document.querySelector(".joypad_container")
             joypad = document.querySelector(".joypad")
@@ -40,25 +39,6 @@
             body.addEventListener("touchend", touchEnd, false);
             body.addEventListener("touchmove", touchMove, false);
             inGame = false;
-        }
-
-        function changeController() {
-            airconsole.onCustomDeviceStateChange = function (key, value) {
-                if (inGame) {
-                    inGame = false;
-                    var controller = document.getElementsByClassName("joypad-menu")[0];
-                    controller.style.display = "flex";
-                }
-                else {
-                    inGame = true;
-                    var controller = document.getElementsByClassName("joypad-menu")[0];
-                    controller.style.display = "none";
-                }
-                vm.onViewChange(data, function (view_id) {
-                    // view has changed
-                    alert("change");
-                });
-            }
         }
 
         function updateText(player_number) {
@@ -80,124 +60,7 @@
             }
             //alert(message);
         }
-        function diagonal(direction, amount) {
 
-            if (direction === "up-left") {
-                if (amount === 1) {
-                    document.getElementById("up-left-v").classList.add("is-none");
-                    document.getElementById("up-left-r").classList.remove("is-none");
-                }
-                else {
-                    document.getElementById("up-left-r").classList.add("is-none");
-                    document.getElementById("up-left-v").classList.remove("is-none");
-                }
-                up(amount);
-                left(amount);
-
-            }
-            if (direction === "up-right") {
-                if (amount === 1) {
-                    document.getElementById("up-right-v").classList.add("is-none");
-                    document.getElementById("up-right-r").classList.remove("is-none");
-                }
-                else {
-                    document.getElementById("up-right-r").classList.add("is-none");
-                    document.getElementById("up-right-v").classList.remove("is-none");
-                }
-                up(amount);
-                right(amount);
-
-            }
-            if (direction === "down-left") {
-                if (amount === 1) {
-                    document.getElementById("down-left-v").classList.add("is-none");
-                    document.getElementById("down-left-r").classList.remove("is-none");
-                }
-                else {
-                    document.getElementById("down-left-r").classList.add("is-none");
-                    document.getElementById("down-left-v").classList.remove("is-none");
-                }
-                down(amount);
-                left(amount);
-            }
-            if (direction === "down-right") {
-                if (amount === 1) {
-                    document.getElementById("down-right-v").classList.add("is-none");
-                    document.getElementById("down-right-r").classList.remove("is-none");
-                }
-                else {
-                    document.getElementById("down-right-r").classList.add("is-none");
-                    document.getElementById("down-right-v").classList.remove("is-none");
-                }
-                down(amount);
-                right(amount);
-            }
-        }
-
-
-        function up(amount) {
-            if (amount === 1) {
-                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: true });
-                document.getElementById("up-v").classList.add("is-none");
-                document.getElementById("up-r").classList.remove("is-none");
-            }
-            else {
-                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
-                document.getElementById("up-r").classList.add("is-none");
-                document.getElementById("up-v").classList.remove("is-none");
-            }
-        }
-        function down(amount) {
-            var element = document.getElementById("down");
-            if (amount === 1) {
-                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: true });
-                document.getElementById("down-v").classList.add("is-none");
-                document.getElementById("down-r").classList.remove("is-none");
-            }
-            else {
-                airconsole.message(AirConsole.SCREEN, {
-                    key: "down",
-                    pressed: false
-                });
-                document.getElementById("down-r").classList.add("is-none");
-                document.getElementById("down-v").classList.remove("is-none");
-            }
-        }
-        function right(amount) {
-            var element = document.getElementById("right");
-            if (amount === 1) {
-                airconsole.message(AirConsole.SCREEN, {
-                    key: "right",
-                    pressed: true
-                });
-                document.getElementById("right-v").classList.add("is-none");
-                document.getElementById("right-r").classList.remove("is-none");
-            }
-            else {
-                airconsole.message(AirConsole.SCREEN, {
-                    key: "right",
-                    pressed: false
-                });
-                document.getElementById("right-r").classList.add("is-none");
-                document.getElementById("right-v").classList.remove("is-none");
-            }
-        }
-        function left(amount) {
-            var element = document.getElementById("left");
-            if (amount === 1) {
-                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: true });
-                document.getElementById("left-v").classList.add("is-none");
-                document.getElementById("left-r").classList.remove("is-none");
-            }
-            else {
-                airconsole.message(AirConsole.SCREEN, {
-                    key: "left",
-                    pressed: false
-                });
-                document.getElementById("left-r").classList.add("is-none");
-                document.getElementById("left-v").classList.remove("is-none");
-            }
-        }
         function confirm(amount) {
             var element = document.getElementById("confirm");
             if (amount == 1) {
@@ -215,7 +78,6 @@
         }
 
         function touchStart(event) {
-            if (inGame) {
                 console.log(event);
                 let xTouch = event.targetTouches[0].pageX;
                 let yTouch = event.targetTouches[0].pageY;
@@ -227,11 +89,9 @@
                 console.log("joypad=" + joypad.style.top + " - " + joypad.style.left);
                 console.log("joypacontainer=" + container.style.top + " - " + container.style.left);
                 joypad.style.display = "block";
-            }
         }
 
         function touchMove(event) {
-            if (inGame) {
                 let xTouch = event.targetTouches[0].pageX;
                 let yTouch = event.targetTouches[0].pageY;
                 let left = parseInt(container.style.left, 10);
@@ -251,13 +111,14 @@
                     Y = -1;
                 }
                 sendMessage(X, Y);
-            }
+            
         }
 
         function sendMessage(x, y) {
+            console.log(x*"-"+y);
             let x_offset = 0;
             let y_offset = 0;
-            document.getElementById("text-info").innerHTML = x + " - " + y;
+            //document.getElementById("text-info").innerHTML = x + " - " + y;
             if (x == 1) {
                 airconsole.message(AirConsole.SCREEN, { key: "right", pressed: true });
                 airconsole.message(AirConsole.SCREEN, { key: "left", pressed: false });
@@ -295,12 +156,11 @@
         }
 
         function touchEnd(event) {
-            if (inGame) {
                 console.log(event);
                 container.style.display = "none";
                 joypad.style.display = "none";
                 sendMessage(0, 0);
-            }
+            
         }
     </script>
     <style type="text/css">
@@ -310,49 +170,32 @@
 
         html,
         body {
+            position: relative;
             height: 100%;
             width: 100%;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             background-color: white;
         }
 
-        .joypad-menu {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        .joypad-col {
-            flex-direction: column;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex: 25%;
-            height: 100%;
-        }
-
-        .joypad-col.center {
-            flex: 50%;
-        }
-
         .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 33.4%;
-            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            height: 25%;
+            width: 25%;
             border: red solid 1px;
             background-color: white;
         }
 
-        .is-hidden {
-            visibility: hidden;
+        .text {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
         }
 
         .is-none {
@@ -387,61 +230,16 @@
 </head>
 
 <body onload="init()">
-    <div class="joypad-menu">
-        <div class="joypad-col">
-            <div class="button" ontouchstart="diagonal('up-left',1)" ontouchmove="diagonal('up-left',1)"
-                ontouchend="diagonal('up-left',0)">
-                <img id="up-left-v" class="arrow" src="AltoSxVerde.png" />
-                <img id="up-left-r" class="arrow is-none" src="AltoSxRosso.png" />
-            </div>
-            <div class="button" ontouchstart="left(1)" ontouchmove="left(1)" ontouchend="left(0)">
-                <img id="left-v" class="arrow" src="CentraleSxVerde.png" />
-                <img id="left-r" class="arrow is-none" src="CentraleSxRosso.png" />
-            </div>
-            <div class="button" ontouchstart="diagonal('down-left',1)" ontouchmove="diagonal('down-left',1)"
-                ontouchend="diagonal('down-left',0)">
-                <img id="down-left-v" class="arrow" src="BassoSxVerde.png" />
-                <img id="down-left-r" class="arrow is-none" src="BassoSxRosso.png" />
-            </div>
-        </div>
-        <div class="joypad-col center">
-            <div class="button up" ontouchstart="up(1)" ontouchmove="up(1)" ontouchend="up(0)">
-                <img id="up-v" class="arrow" src="CentraleAltoVerde.png" />
-                <img id="up-r" class="arrow is-none" src="CentraleAltoRosso.png" />
-            </div>
-            <div class="button" ontouchstart="confirm(1)" ontouchmove="confirm(1)" ontouchend="confirm(0)">
-                <img id="confirm-v" class="arrow" src="CentraleVerde.png" />
-                <img id="confirm-r" class="arrow is-none" src="CentraleRosso.png" />
-            </div>
-            <div class="button" ontouchstart="down(1)" ontouchmove="down(1)" ontouchend="down(0)">
-                <img id="down-v" class="arrow" src="CentraleBassoVerde.png" />
-                <img id="down-r" class="arrow is-none" src="CentraleBassoRosso.png" />
-            </div>
-        </div>
-        <div class="joypad-col">
-            <div class="button" ontouchstart="diagonal('up-right',1)" ontouchmove="diagonal('up-right',1)"
-                ontouchend="diagonal('up-right',0)">
-                <img id="up-right-v" class="arrow" src="AltoDxVerde.png" />
-                <img id="up-right-r" class="arrow is-none" src="AltoDxRosso.png" />
-            </div>
-            <div class="button" ontouchstart="right(1)" ontouchmove="right(1)" ontouchend="right(0)">
-                <img id="right-v" class="arrow" src="CentraleDxVerde.png" />
-                <img id="right-r" class="arrow is-none" src="CentraleDxRosso.png" />
-            </div>
-            <div class="button" ontouchstart="diagonal('down-right',1)" ontouchmove="diagonal('down-right',1)"
-                ontouchend="diagonal('down-right',0)">
-                <img id="down-right-v" class="arrow" src="BassoDxVerde.png" />
-                <img id="down-right-r" class="arrow is-none" src="BassoDxRosso.png" />
-            </div>
-        </div>
+    <div class="button" ontouchstart="confirm(1)" ontouchmove="confirm(1)" ontouchend="confirm(0)">
+        <img id="confirm-v" class="arrow" src="CentraleVerde.png" />
+        <img id="confirm-r" class="arrow is-none" src="CentraleRosso.png" />
     </div>
-
     <div class="joypad_container">
-        <div id="text-info">INFO</div>
+        <div id="text-info"></div>
         <div class="joypad">
-
         </div>
     </div>
+    <p class="text"> Press anywhere to move you character or in the menu</p>
 </body>
 
 </html>

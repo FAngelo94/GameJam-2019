@@ -86,7 +86,6 @@ public class ChooseCharacterManager : MonoBehaviour
         AudioManager.instance.PlaySoundOnce(SoundEvent.StartLevel, transform.position);
         AudioManager.instance.StartLevelMusic();
         SceneManager.LoadScene("Level_1");
-        AirConsole.instance.SetCustomDeviceStateProperty("view", "game");
     }
 
     void UpdateGUI(int players)

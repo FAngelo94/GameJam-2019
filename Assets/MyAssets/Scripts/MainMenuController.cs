@@ -40,15 +40,13 @@ public class MainMenuController : MonoBehaviour
             {
                if (key.Equals("right"))
                 {
-                    if (index < 0) index++;
-                    else index = -1;
+                    index = 0;
                     UpdateUI();
 
                 }
                 if (key.Equals("left"))
                 {
-                    if (index > -1) index--;
-                    else index = 0;
+                    index = -1;
                     UpdateUI();
                 }
 
