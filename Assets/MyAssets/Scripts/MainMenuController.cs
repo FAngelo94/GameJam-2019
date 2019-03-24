@@ -32,7 +32,6 @@ public class MainMenuController : MonoBehaviour
     {
         //get master controller
         int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber(AirConsole.instance.GetMasterControllerDeviceId());
-
         if (data != null && data["key"] != null && data["pressed"] != null)
         {
             string key = key = (string)data["key"];

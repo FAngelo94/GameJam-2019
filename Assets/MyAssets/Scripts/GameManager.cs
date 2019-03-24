@@ -72,5 +72,6 @@ public class GameManager : MonoBehaviour
         Panels.SetActive(false);
         AudioManager.instance.PlaySoundOnce(SoundEvent.ButtonPressed, transform.position);
         SceneManager.LoadScene("MainMenu");
+        AirConsole.instance.SetCustomDeviceStateProperty("view", "notgame");
     }
 }

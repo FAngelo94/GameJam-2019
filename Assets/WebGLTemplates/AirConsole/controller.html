@@ -2,8 +2,22 @@
 
 <head>
     <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-1.7.0.js"></script>
+    <script type="text/javascript" src="controller/libs/airconsole_view_manager.js"></script>
     <script type="text/javascript">
         var airconsole;
+        var vm = null;
+        //board of container
+        let borderWidth = 3;
+
+        //precision  when user moves finger
+        let precision = 25;
+
+        //main objects in the screen
+        let container;
+        let joypad;
+        let body;
+
+        let inGame;
         /**
          * Sets up the communication to the screen.
          */
@@ -14,9 +28,39 @@
                 updateText(player_number);
             };
             airconsole.onReady = function () {
-                updateText();
+                vm = new AirConsoleViewManager(airconsole);
+
             };
+
+            changeController();
+            body = document.querySelector("body");
+            container = document.querySelector(".joypad_container")
+            joypad = document.querySelector(".joypad")
+            body.addEventListener("touchstart", touchStart, false);
+            body.addEventListener("touchend", touchEnd, false);
+            body.addEventListener("touchmove", touchMove, false);
+            inGame = false;
         }
+
+        function changeController() {
+            airconsole.onCustomDeviceStateChange = function (key, value) {
+                if (inGame) {
+                    inGame = false;
+                    var controller = document.getElementsByClassName("joypad-menu")[0];
+                    controller.style.display = "flex";
+                }
+                else {
+                    inGame = true;
+                    var controller = document.getElementsByClassName("joypad-menu")[0];
+                    controller.style.display = "none";
+                }
+                vm.onViewChange(data, function (view_id) {
+                    // view has changed
+                    alert("change");
+                });
+            }
+        }
+
         function updateText(player_number) {
             var message = "";
             if (player_number == 0) {
@@ -169,6 +213,96 @@
                 document.getElementById("confirm-v").classList.remove("is-none");
             }
         }
+
+        function touchStart(event) {
+            if (inGame) {
+                console.log(event);
+                let xTouch = event.targetTouches[0].pageX;
+                let yTouch = event.targetTouches[0].pageY;
+                container.style.top = yTouch;
+                container.style.left = xTouch;
+                container.style.display = "block";
+                joypad.style.top = container.offsetHeight / 2 - borderWidth;
+                joypad.style.left = container.offsetWidth / 2 - borderWidth;
+                console.log("joypad=" + joypad.style.top + " - " + joypad.style.left);
+                console.log("joypacontainer=" + container.style.top + " - " + container.style.left);
+                joypad.style.display = "block";
+            }
+        }
+
+        function touchMove(event) {
+            if (inGame) {
+                let xTouch = event.targetTouches[0].pageX;
+                let yTouch = event.targetTouches[0].pageY;
+                let left = parseInt(container.style.left, 10);
+                let top = parseInt(container.style.top, 10);
+                let X = 0;
+                let Y = 0;
+                if (xTouch < left - precision) {
+                    X = -1;
+                }
+                if (yTouch < top - precision) {
+                    Y = 1;
+                }
+                if (xTouch > left + precision) {
+                    X = 1;
+                }
+                if (yTouch > top + precision) {
+                    Y = -1;
+                }
+                sendMessage(X, Y);
+            }
+        }
+
+        function sendMessage(x, y) {
+            let x_offset = 0;
+            let y_offset = 0;
+            document.getElementById("text-info").innerHTML = x + " - " + y;
+            if (x == 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "right", pressed: true });
+                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: false });
+                x_offset = 30;
+            }
+            if (x == -1) {
+                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: true });
+                airconsole.message(AirConsole.SCREEN, { key: "right", pressed: false });
+                x_offset = -30;
+            }
+            if (y == 1) {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: true });
+                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: false });
+                y_offset = -30;
+            }
+            if (y == -1) {
+                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: true });
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
+                y_offset = 30;
+            }
+            if (x == 0) {
+                airconsole.message(AirConsole.SCREEN, { key: "right", pressed: false });
+                airconsole.message(AirConsole.SCREEN, { key: "left", pressed: false });
+            }
+            if (y == 0) {
+                airconsole.message(AirConsole.SCREEN, { key: "up", pressed: false });
+                airconsole.message(AirConsole.SCREEN, { key: "down", pressed: false });
+            }
+            if(y_offset!=0 && x_offset!=0)
+            {
+                y_offset = y_offset < 0 ? y_offset + 8 : y_offset - 8
+                x_offset = x_offset < 0 ? x_offset - 8 : x_offset + 8
+            }
+            joypad.style.top = container.offsetHeight / 2 - borderWidth + y_offset;
+            joypad.style.left = container.offsetWidth / 2 - borderWidth + x_offset;
+        }
+
+        function touchEnd(event) {
+            if (inGame) {
+                console.log(event);
+                container.style.display = "none";
+                joypad.style.display = "none";
+                sendMessage(0, 0);
+            }
+        }
     </script>
     <style type="text/css">
         @font-face {
@@ -184,9 +318,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: white;
         }
 
-        .joypad {
+        .joypad-menu {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -229,64 +364,83 @@
             width: 100%;
             height: 100%;
         }
+
+        .joypad_container {
+            border-radius: 100%;
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            border: black 3px solid;
+            display: none;
+            transform: translate(-50%, -50%);
+        }
+
+        .joypad {
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-color: red;
+            display: none;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
 <body onload="init()">
-    <div class="joypad">
+    <div class="joypad-menu">
         <div class="joypad-col">
-            <div class="button" ontouchstart="diagonal('up-left',1)" ontouchmove="diagonal('up-left',1)" ontouchend="diagonal('up-left',0)">
+            <div class="button" ontouchstart="diagonal('up-left',1)" ontouchmove="diagonal('up-left',1)"
+                ontouchend="diagonal('up-left',0)">
                 <img id="up-left-v" class="arrow" src="AltoSxVerde.png" />
-                <img id="up-left-r" class="arrow is-none"
-                    src="AltoSxRosso.png" />
+                <img id="up-left-r" class="arrow is-none" src="AltoSxRosso.png" />
             </div>
             <div class="button" ontouchstart="left(1)" ontouchmove="left(1)" ontouchend="left(0)">
                 <img id="left-v" class="arrow" src="CentraleSxVerde.png" />
-                <img id="left-r" class="arrow is-none"
-                    src="CentraleSxRosso.png" />
+                <img id="left-r" class="arrow is-none" src="CentraleSxRosso.png" />
             </div>
-            <div class="button" ontouchstart="diagonal('down-left',1)" ontouchmove="diagonal('down-left',1)" ontouchend="diagonal('down-left',0)">
-                <img id="down-left-v" class="arrow"
-                    src="BassoSxVerde.png" />
-                <img id="down-left-r" class="arrow is-none"
-                    src="BassoSxRosso.png" />
+            <div class="button" ontouchstart="diagonal('down-left',1)" ontouchmove="diagonal('down-left',1)"
+                ontouchend="diagonal('down-left',0)">
+                <img id="down-left-v" class="arrow" src="BassoSxVerde.png" />
+                <img id="down-left-r" class="arrow is-none" src="BassoSxRosso.png" />
             </div>
         </div>
         <div class="joypad-col center">
             <div class="button up" ontouchstart="up(1)" ontouchmove="up(1)" ontouchend="up(0)">
                 <img id="up-v" class="arrow" src="CentraleAltoVerde.png" />
-                <img id="up-r" class="arrow is-none"
-                    src="CentraleAltoRosso.png" />
+                <img id="up-r" class="arrow is-none" src="CentraleAltoRosso.png" />
             </div>
             <div class="button" ontouchstart="confirm(1)" ontouchmove="confirm(1)" ontouchend="confirm(0)">
                 <img id="confirm-v" class="arrow" src="CentraleVerde.png" />
-                <img id="confirm-r" class="arrow is-none"
-                    src="CentraleRosso.png" />
+                <img id="confirm-r" class="arrow is-none" src="CentraleRosso.png" />
             </div>
             <div class="button" ontouchstart="down(1)" ontouchmove="down(1)" ontouchend="down(0)">
-                <img id="down-v" class="arrow"
-                    src="CentraleBassoVerde.png" />
-                <img id="down-r" class="arrow is-none"
-                    src="CentraleBassoRosso.png" />
+                <img id="down-v" class="arrow" src="CentraleBassoVerde.png" />
+                <img id="down-r" class="arrow is-none" src="CentraleBassoRosso.png" />
             </div>
         </div>
         <div class="joypad-col">
-            <div class="button" ontouchstart="diagonal('up-right',1)" ontouchmove="diagonal('up-right',1)" ontouchend="diagonal('up-right',0)">
+            <div class="button" ontouchstart="diagonal('up-right',1)" ontouchmove="diagonal('up-right',1)"
+                ontouchend="diagonal('up-right',0)">
                 <img id="up-right-v" class="arrow" src="AltoDxVerde.png" />
-                <img id="up-right-r" class="arrow is-none"
-                    src="AltoDxRosso.png" />
+                <img id="up-right-r" class="arrow is-none" src="AltoDxRosso.png" />
             </div>
             <div class="button" ontouchstart="right(1)" ontouchmove="right(1)" ontouchend="right(0)">
                 <img id="right-v" class="arrow" src="CentraleDxVerde.png" />
-                <img id="right-r" class="arrow is-none"
-                    src="CentraleDxRosso.png" />
+                <img id="right-r" class="arrow is-none" src="CentraleDxRosso.png" />
             </div>
-            <div class="button" ontouchstart="diagonal('down-right',1)" ontouchmove="diagonal('down-right',1)" ontouchend="diagonal('down-right',0)">
-                <img id="down-right-v" class="arrow"
-                    src="BassoDxVerde.png" />
-                <img id="down-right-r" class="arrow is-none"
-                    src="BassoDxRosso.png" />
+            <div class="button" ontouchstart="diagonal('down-right',1)" ontouchmove="diagonal('down-right',1)"
+                ontouchend="diagonal('down-right',0)">
+                <img id="down-right-v" class="arrow" src="BassoDxVerde.png" />
+                <img id="down-right-r" class="arrow is-none" src="BassoDxRosso.png" />
             </div>
+        </div>
+    </div>
+
+    <div class="joypad_container">
+        <div id="text-info">INFO</div>
+        <div class="joypad">
+
         </div>
     </div>
 </body>
